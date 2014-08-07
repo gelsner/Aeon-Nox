@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-  id="skin.aeon.nox.5"
-  version="5.1.4"
-  name="Aeon Nox"
+  id="skin.aeon.nox5.gotham.xbmb3c"
+  version="5.1.4b"
+  name="Aeon Nox 5 XBMB3C"
   provider-name="BigNoid">
 	<requires>
 		<import addon="xbmc.gui" version="5.0.0"/>

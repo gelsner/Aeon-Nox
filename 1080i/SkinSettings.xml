@@ -463,6 +463,17 @@
 						<onclick>Skin.ToggleSetting(Enable.SlimList)</onclick>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
+					<control type="radiobutton" id="406">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>Media Browser Mode</label>
+						<onclick>Skin.ToggleSetting(xbmb3c)</onclick>
+						<onclick>Skin.Reset(defaultsettings)</onclick>
+						<selected>Skin.HasSetting(xbmb3c)</selected>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+					</control>
 				</control>
 			</control>
 		</control>

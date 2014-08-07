@@ -705,6 +705,7 @@
 							<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
 						</control>
 					</focusedlayout>
+					<include condition="Skin.HasSetting(xbmb3c)">xbmb3c-actors</include>
 				</control>
 				<control type="image">
 					<left>822</left>

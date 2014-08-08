@@ -501,9 +501,10 @@
 	<include name="XBMB3CMenuMovieItem0">
 		<item id="700">
 			<label>$INFO[Window(Home).Property(xbmb3c.usr.movies.0.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.0.path)]</onclick>
+			<onclick>$INFO[Window(Home).Property(xbmb3c.usr.movies.0.path)]</onclick>
 			<!--<icon fallback="special://skin/extras/icons/Customize.png">$INFO[Skin.String(Custom6HomeItem.Icon)]</icon>-->
 			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.movies.0.thumb]</thumb>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.movies.0.type]</property>
 			<!--<property name="Path">$INFO[Skin.String(Custom6HomeItem.Path)]</property>
 			<property name="Item">Custom6</property>
 			<property name="BGType">$INFO[Skin.String(Custom6HomeItem.BGType)]</property>
@@ -520,6 +521,7 @@
 			<label>$INFO[Window(Home).Property(xbmb3c.usr.movies.1.title)]</label>
 			<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.movies.1.thumb]</thumb>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.movies.1.type]</property>
 		</item>
 	</include>
 	<include name="XBMB3CMenuShowItem0">
@@ -527,6 +529,7 @@
 			<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.title)]</label>
 			<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.0.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.thumb]</thumb>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.type]</property>
 		</item>
 	</include>
 	<include name="XBMB3CMenuShowItem1">
@@ -534,6 +537,7 @@
 			<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.title)]</label>
 			<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.1.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.thumb]</thumb>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.type]</property>
 		</item>
 	</include>
 

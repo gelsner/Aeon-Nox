@@ -505,6 +505,7 @@
 			<!--<icon fallback="special://skin/extras/icons/Customize.png">$INFO[Skin.String(Custom6HomeItem.Icon)]</icon>-->
 			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.movies.0.thumb]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.movies.0.type]</property>
+			<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.movies.0.title))</visible>
 			<!--<property name="Path">$INFO[Skin.String(Custom6HomeItem.Path)]</property>
 			<property name="Item">Custom6</property>
 			<property name="BGType">$INFO[Skin.String(Custom6HomeItem.BGType)]</property>
@@ -522,6 +523,7 @@
 			<onclick>$INFO[Window(Home).Property(xbmb3c.std.movies.1.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.movies.1.thumb]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.movies.1.type]</property>
+			<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.movies.1.title))</visible>
 		</item>
 	</include>
 	<include name="XBMB3CMenuShowItem0">
@@ -530,6 +532,7 @@
 			<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.0.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.thumb]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.type]</property>
+			<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.0.title))</visible>
 		</item>
 	</include>
 	<include name="XBMB3CMenuShowItem1">
@@ -538,6 +541,7 @@
 			<onclick>$INFO[Window(Home).Property(xbmb3c.std.tvshows.1.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.thumb]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.type]</property>
+			<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.1.title))</visible>
 		</item>
 	</include>
 
@@ -561,10 +565,10 @@
 			<include condition="IsEmpty(Skin.String(FavoritesHomeItem.Disable))">FavoritesMainMenu</include>
 			<include condition="IsEmpty(Skin.String(WeatherHomeItem.Disable))">WeatherMainMenu</include>
 			<include condition="IsEmpty(Skin.String(MusicVideoHomeItem.Disable))">MusicVideosMainMenu</include>
-			<include condition="Skin.HasSetting(xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c.usr.movies.0.title))">XBMB3CMenuMovieItem0</include>
-			<include condition="Skin.HasSetting(xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c.usr.movies.1.title))">XBMB3CMenuMovieItem1</include>
-			<include condition="Skin.HasSetting(xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.0.title))">XBMB3CMenuShowItem0</include>
-			<include condition="Skin.HasSetting(xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.1.title))">XBMB3CMenuShowItem1</include>
+			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuMovieItem0</include>
+			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuMovieItem1</include>
+			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuShowItem0</include>
+			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuShowItem1</include>
 		</content>
 	</include>
 

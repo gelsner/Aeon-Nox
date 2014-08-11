@@ -504,7 +504,8 @@
 			<onclick>$INFO[Window.Property(xbmb3c_collection_menuitem_action_0)]</onclick>
 			<!--<icon fallback="special://skin/extras/icons/Customize.png">$INFO[Skin.String(Custom6HomeItem.Icon)]</icon>-->
 			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_0)]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.0.type)]</property>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c_collection_menuitem_type_0)]</property>
+			<property name="MB.currentcollection">zero</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_0))</visible>
 			<!--<property name="Path">$INFO[Skin.String(Custom6HomeItem.Path)]</property>
 			<property name="Item">Custom6</property>
@@ -522,7 +523,8 @@
 			<label>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_1)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c_collection_menuitem_action_1)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_1)]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.1.type)]</property>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c_collection_menuitem_type_1)]</property>
+			<property name="MB.currentcollection">one</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_1))</visible>
 		</item>
 	</include>
@@ -531,7 +533,8 @@
 			<label>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_2)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c_collection_menuitem_action_2)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_2)]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.2.type)]</property>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c_collection_menuitem_type_2)]</property>
+			<property name="MB.currentcollection">two</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_2))</visible>
 		</item>
 	</include>
@@ -540,7 +543,8 @@
 			<label>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_3)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c_collection_menuitem_action_3)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_3)]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.3.type)]</property>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c_collection_menuitem_type_3)]</property>
+			<property name="MB.currentcollection">three</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_3))</visible>
 		</item>
 	</include>
@@ -549,7 +553,8 @@
 			<label>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_4)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c_collection_menuitem_action_4)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_4)]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.4.type)]</property>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c_collection_menuitem_type_4)]</property>
+			<property name="MB.currentcollection">four</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_4))</visible>
 		</item>
 	</include>
@@ -558,7 +563,8 @@
 			<label>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_5)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c_collection_menuitem_action_5)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_5)]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.5.type)]</property>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c_collection_menuitem_type_5)]</property>
+			<property name="MB.currentcollection">five</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_5))</visible>
 		</item>
 	</include>
@@ -567,7 +573,8 @@
 			<label>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_6)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c_collection_menuitem_action_6)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_6)]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.6.type)]</property>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c_collection_menuitem_type_6)]</property>
+			<property name="MB.currentcollection">six</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_6))</visible>
 		</item>
 	</include>
@@ -576,7 +583,8 @@
 			<label>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_7)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c_collection_menuitem_action_7)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_7)]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.7.type)]</property>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c_collection_menuitem_type_7)]</property>
+			<property name="MB.currentcollection">seven</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_7))</visible>
 		</item>
 	</include>
@@ -585,7 +593,8 @@
 			<label>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_8)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c_collection_menuitem_action_8)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_8)]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.8.type)]</property>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c_collection_menuitem_type_8)]</property>
+			<property name="MB.currentcollection">eight</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_8))</visible>
 		</item>
 	</include>
@@ -594,7 +603,8 @@
 			<label>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_9)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c_collection_menuitem_action_9)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_9)]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.9.type)]</property>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c_collection_menuitem_type_9)]</property>
+			<property name="MB.currentcollection">nine</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_9))</visible>
 		</item>
 	</include>
@@ -603,7 +613,8 @@
 			<label>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_10)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c_collection_menuitem_action_10)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_10)]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.10.type)]</property>
+			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c_collection_menuitem_type_10)]</property>
+			<property name="MB.currentcollection">ten</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_10))</visible>
 		</item>
 	</include>

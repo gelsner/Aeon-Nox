@@ -5,7 +5,7 @@
 			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0">WindowOpen</animation>
 			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
 			<animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
-			<visible>[[StringCompare(Container(9000).ListItem.Property(WidgetType),1) | StringCompare(Container(9000).ListItem.Property(WidgetType),2) | StringCompare(Container(9000).ListItem.Property(WidgetType),4) | StringCompare(Container(9000).ListItem.Property(WidgetType),5)]] | Skin.HasSetting(xbmb3c) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows)</visible>
+			<visible>[[StringCompare(Container(9000).ListItem.Property(WidgetType),1) | StringCompare(Container(9000).ListItem.Property(WidgetType),2) | StringCompare(Container(9000).ListItem.Property(WidgetType),4) | StringCompare(Container(9000).ListItem.Property(WidgetType),5)]] | Skin.HasSetting(xbmb3c) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), musicvideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos)</visible>
 			<include>VisibleFadeEffect</include>
 
 			

@@ -78,6 +78,17 @@
 						<shadowcolor>black</shadowcolor>
 						<label>$INFO[Container(8000).ListItem.Title]</label>
 						<wrapmultiline>true</wrapmultiline>
+						<visible>!Skin.HasSetting(xbmb3c)</visible>
+					</control>
+					<control type="label">
+						<width>900</width>
+						<height>40</height>
+						<font>font14_title</font>
+						<textcolor>labelheader</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[Container(8000).ListItem.Label]</label>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>Skin.HasSetting(xbmb3c)</visible>
 					</control>
 					<control type="label">
 						<width>900</width>
@@ -144,7 +155,7 @@
 						<textcolor>white2</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<label>$INFO[Container(8000).ListItem.Director,$LOCALIZE[31000] ]</label>
-						<visible>IsEmpty(Container(8000).ListItem.Artist) + IsEmpty(Container(8000).ListItem.TvShowTitle)</visible>
+						<visible>IsEmpty(Container(8000).ListItem.Artist) + IsEmpty(Container(8000).ListItem.TvShowTitle) + !Skin.HasSetting(xbmb3c)</visible>
 					</control>
 					<!--<control type="label">
 						<width>900</width>
@@ -268,6 +279,17 @@
 						<width>422</width>
 						<height>422</height>
 						<texture border="40">dialogs/default/bg2.png</texture>
+					</control>
+					<control type="label">
+						<posx>32</posx>
+						<posy>32</posy>
+						<width>362</width>
+						<height>40</height>
+						<font>font15_title</font>
+						<align>center</align>
+						<textcolor>dialogheader</textcolor>
+						<label>$LOCALIZE[19605]</label>
+						<visible>Skin.HasSetting(xbmb3c)</visible>
 					</control>
 					<control type="label">
 						<posx>32</posx>

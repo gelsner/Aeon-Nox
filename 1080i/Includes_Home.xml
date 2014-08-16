@@ -618,51 +618,6 @@
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_10))</visible>
 		</item>
 	</include>
-	<!--<include name="XBMB3CMenuShowItem0">
-		<item id="710">
-			<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.thumb]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.0.type]</property>
-			<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.0.title))</visible>
-		</item>
-	</include>
-	<include name="XBMB3CMenuShowItem1">
-		<item id="711">
-			<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.thumb]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.1.type]</property>
-			<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.1.title))</visible>
-		</item>
-	</include>
-	<include name="XBMB3CMenuShowItem2">
-		<item id="712">
-			<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.thumb]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.2.type]</property>
-			<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.2.title))</visible>
-		</item>
-	</include>
-	<include name="XBMB3CMenuShowItem3">
-		<item id="713">
-			<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.3.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.3.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.3.thumb]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.3.type]</property>
-			<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.3.title))</visible>
-		</item>
-	</include>
-	<include name="XBMB3CMenuShowItem4">
-		<item id="714">
-			<label>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.4.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.4.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c.usr.tvshows.4.thumb]</thumb>
-			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.usr.tvshows.4.type]</property>
-			<visible>!IsEmpty(Window(Home).Property(xbmb3c.usr.tvshows.4.title))</visible>
-		</item>
-	</include>-->
 
 	<include name="FallbackMenu">
 		<content>
@@ -695,11 +650,6 @@
 			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem8</include>
 			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem9</include>
 			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem10</include>
-			<!--<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuShowItem0</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuShowItem1</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuShowItem2</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuShowItem3</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuShowItem4</include>-->
 		</content>
 	</include>
 

@@ -503,7 +503,7 @@
 			<label>$INFO[Window(Home).Property(xbmb3c.0.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.0.path)]</onclick>
 			<!--<icon fallback="special://skin/extras/icons/Customize.png">$INFO[Skin.String(Custom6HomeItem.Icon)]</icon>-->
-			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_0)]</thumb>
+			<thumb>$INFO[Window(Home).Property(xbmb3c.0.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.0.type)]</property>
 			<property name="MB.currentcollection">zero</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_0))</visible>
@@ -522,7 +522,7 @@
 		<item id="701">
 			<label>$INFO[Window(Home).Property(xbmb3c.1.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.1.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_1)]</thumb>
+			<thumb>$INFO[Window(Home).Property(xbmb3c.1.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.1.type)]</property>
 			<property name="MB.currentcollection">one</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_1))</visible>
@@ -532,7 +532,7 @@
 		<item id="702">
 			<label>$INFO[Window(Home).Property(xbmb3c.2.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.2.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_2)]</thumb>
+			<thumb>$INFO[Window(Home).Property(xbmb3c.2.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.2.type)]</property>
 			<property name="MB.currentcollection">two</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_2))</visible>
@@ -542,7 +542,7 @@
 		<item id="703">
 			<label>$INFO[Window(Home).Property(xbmb3c.3.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.3.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_3)]</thumb>
+			<thumb>$INFO[Window(Home).Property(xbmb3c.3.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.3.type)]</property>
 			<property name="MB.currentcollection">three</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_3))</visible>
@@ -552,7 +552,7 @@
 		<item id="704">
 			<label>$INFO[Window(Home).Property(xbmb3c.4.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.4.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_4)]</thumb>
+			<thumb>$INFO[Window(Home).Property(xbmb3c.4.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.4.type)]</property>
 			<property name="MB.currentcollection">four</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_4))</visible>
@@ -562,7 +562,7 @@
 		<item id="705">
 			<label>$INFO[Window(Home).Property(xbmb3c.5.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.5.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_5)]</thumb>
+			<thumb>$INFO[Window(Home).Property(xbmb3c.5.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.5.type)]</property>
 			<property name="MB.currentcollection">five</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_5))</visible>
@@ -572,7 +572,7 @@
 		<item id="706">
 			<label>$INFO[Window(Home).Property(xbmb3c.6.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.6.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_6)]</thumb>
+			<thumb>$INFO[Window(Home).Property(xbmb3c.6.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.6.type)]</property>
 			<property name="MB.currentcollection">six</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_6))</visible>
@@ -582,7 +582,7 @@
 		<item id="707">
 			<label>$INFO[Window(Home).Property(xbmb3c.7.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.7.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_7)]</thumb>
+			<thumb>$INFO[Window(Home).Property(xbmb3c.7.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.7.type)]</property>
 			<property name="MB.currentcollection">seven</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_7))</visible>
@@ -592,7 +592,7 @@
 		<item id="708">
 			<label>$INFO[Window(Home).Property(xbmb3c.8.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.8.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_8)]</thumb>
+			<thumb>$INFO[Window(Home).Property(xbmb3c.8.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.8.type)]</property>
 			<property name="MB.currentcollection">eight</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_8))</visible>
@@ -602,7 +602,7 @@
 		<item id="709">
 			<label>$INFO[Window(Home).Property(xbmb3c.9.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.9.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_9)]</thumb>
+			<thumb>$INFO[Window(Home).Property(xbmb3c.9.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.9.type)]</property>
 			<property name="MB.currentcollection">nine</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_9))</visible>
@@ -612,7 +612,7 @@
 		<item id="710">
 			<label>$INFO[Window(Home).Property(xbmb3c.10.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.10.path)]</onclick>
-			<thumb>$INFO[Window(Home).Property(xbmb3c_collection_menuitem_primary_10)]</thumb>
+			<thumb>$INFO[Window(Home).Property(xbmb3c.10.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.10.type)]</property>
 			<property name="MB.currentcollection">ten</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_10))</visible>

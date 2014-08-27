@@ -502,119 +502,120 @@
 		<item id="700">
 			<label>$INFO[Window(Home).Property(xbmb3c.0.title)]</label>
 			<onclick>$INFO[Window.Property(xbmb3c.0.path)]</onclick>
-			<!--<icon fallback="special://skin/extras/icons/Customize.png">$INFO[Skin.String(Custom6HomeItem.Icon)]</icon>-->
 			<thumb>$INFO[Window(Home).Property(xbmb3c.0.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.0.type)]</property>
 			<property name="MB.currentcollection">zero</property>
+			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.0.recent.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_0))</visible>
-			<!--<property name="Path">$INFO[Skin.String(Custom6HomeItem.Path)]</property>
-			<property name="Item">Custom6</property>
-			<property name="BGType">$INFO[Skin.String(Custom6HomeItem.BGType)]</property>
-			<property name="Widget">$INFO[Skin.String(Custom6HomeItem.Widget)]</property>
-			<property name="WidgetLabel">$INFO[Skin.String(Custom6HomeItem.WidgetLabel)]</property>
-			<property name="WidgetType">$INFO[Skin.String(Custom6HomeItem.WidgetType)]</property>
-			<property name="InfoLine">$INFO[Skin.String(Custom6HomeItem.InfoLine)]</property>
-			<property name="submenuVisibility" fallback="x606">$INFO[Skin.String(Custom6HomeItem.SubMenu)]</property>
-			<property name="Disable">$INFO[Skin.String(Custom6HomeItem.Disable)]</property>-->
 		</item>
 	</include>
 	<include name="XBMB3CMenuItem1">
 		<item id="701">
 			<label>$INFO[Window(Home).Property(xbmb3c.1.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.1.path)]</onclick>
+			<onclick>$INFO[Window(Home).Property(xbmb3c.1.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.1.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.1.type)]</property>
 			<property name="MB.currentcollection">one</property>
+			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.1.recent.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_1))</visible>
 		</item>
 	</include>
 	<include name="XBMB3CMenuItem2">
 		<item id="702">
 			<label>$INFO[Window(Home).Property(xbmb3c.2.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.2.path)]</onclick>
+			<onclick>$INFO[Window(Home).Property(xbmb3c.2.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.2.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.2.type)]</property>
 			<property name="MB.currentcollection">two</property>
+			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.2.recent.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_2))</visible>
 		</item>
 	</include>
 	<include name="XBMB3CMenuItem3">
 		<item id="703">
 			<label>$INFO[Window(Home).Property(xbmb3c.3.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.3.path)]</onclick>
+			<onclick>$INFO[Window(Home).Property(xbmb3c.3.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.3.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.3.type)]</property>
 			<property name="MB.currentcollection">three</property>
+			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.3.recent.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_3))</visible>
 		</item>
 	</include>
 	<include name="XBMB3CMenuItem4">
 		<item id="704">
 			<label>$INFO[Window(Home).Property(xbmb3c.4.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.4.path)]</onclick>
+			<onclick>$INFO[Window(Home).Property(xbmb3c.4.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.4.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.4.type)]</property>
 			<property name="MB.currentcollection">four</property>
+			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.4.recent.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_4))</visible>
 		</item>
 	</include>
 	<include name="XBMB3CMenuItem5">
 		<item id="705">
 			<label>$INFO[Window(Home).Property(xbmb3c.5.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.5.path)]</onclick>
+			<onclick>$INFO[Window(Home).Property(xbmb3c.5.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.5.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.5.type)]</property>
 			<property name="MB.currentcollection">five</property>
+			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.5.recent.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_5))</visible>
 		</item>
 	</include>
 	<include name="XBMB3CMenuItem6">
 		<item id="706">
 			<label>$INFO[Window(Home).Property(xbmb3c.6.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.6.path)]</onclick>
+			<onclick>$INFO[Window(Home).Property(xbmb3c.6.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.6.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.6.type)]</property>
 			<property name="MB.currentcollection">six</property>
+			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.6.recent.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_6))</visible>
 		</item>
 	</include>
 	<include name="XBMB3CMenuItem7">
 		<item id="707">
 			<label>$INFO[Window(Home).Property(xbmb3c.7.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.7.path)]</onclick>
+			<onclick>$INFO[Window(Home).Property(xbmb3c.7.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.7.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.7.type)]</property>
 			<property name="MB.currentcollection">seven</property>
+			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.7.recent.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_7))</visible>
 		</item>
 	</include>
 	<include name="XBMB3CMenuItem8">
 		<item id="708">
 			<label>$INFO[Window(Home).Property(xbmb3c.8.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.8.path)]</onclick>
+			<onclick>$INFO[Window(Home).Property(xbmb3c.8.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.8.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.8.type)]</property>
 			<property name="MB.currentcollection">eight</property>
+			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.8.recent.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_8))</visible>
 		</item>
 	</include>
 	<include name="XBMB3CMenuItem9">
 		<item id="709">
 			<label>$INFO[Window(Home).Property(xbmb3c.9.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.9.path)]</onclick>
+			<onclick>$INFO[Window(Home).Property(xbmb3c.9.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.9.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.9.type)]</property>
 			<property name="MB.currentcollection">nine</property>
+			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.9.recent.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_9))</visible>
 		</item>
 	</include>
 	<include name="XBMB3CMenuItem10">
 		<item id="710">
 			<label>$INFO[Window(Home).Property(xbmb3c.10.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.10.path)]</onclick>
+			<onclick>$INFO[Window(Home).Property(xbmb3c.10.path)]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.10.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.10.type)]</property>
 			<property name="MB.currentcollection">ten</property>
+			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.10.recent.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_10))</visible>
 		</item>
 	</include>
@@ -1074,4 +1075,21 @@
 			<include>skinshortcuts-submenu</include>
 		</content>
 	</include>
+
+	<include name="xbmb3c-submenu">
+		<content>
+			<include>xbmb3c-submenu-items</include>
+		</content>
+	</include>
+
+	<include name="xbmb3c-submenu-items">
+		<item>
+			<!-- recently added -->
+			<label>$LOCALIZE[31328]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(MB.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), musicvideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), music)]</visible>
+			<onclick>$INFO[Container(9000).ListItem.Property(MB.recent.action)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+
 </includes>

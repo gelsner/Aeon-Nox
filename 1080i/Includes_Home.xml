@@ -1058,6 +1058,7 @@
 	</include>
 	<include name="FallbackSubMenu">
 		<content>
+			<include>xbmb3c-submenu-items</include>
 			<include>HomeSubMenuVideos</include>
 			<include>HomeSubMenuMovies</include>
 			<include>HomeSubMenuTVShows</include>
@@ -1072,13 +1073,8 @@
 	</include>
 	<include name="CustomSubMenu">
 		<content>
-			<include>skinshortcuts-submenu</include>
-		</content>
-	</include>
-
-	<include name="xbmb3c-submenu">
-		<content>
 			<include>xbmb3c-submenu-items</include>
+			<include>skinshortcuts-submenu</include>
 		</content>
 	</include>
 

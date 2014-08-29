@@ -233,9 +233,8 @@
 							</control>
 						</control>
 					</focusedlayout>
-					<!--<include condition="!System.HasAddon(script.skinshortcuts)">FallbackSubMenu</include>-->
-					<!--<include condition="System.HasAddon(script.skinshortcuts)">CustomSubMenu</include>-->
-					<include condition="Skin.HasSetting(xbmb3c)">xbmb3c-submenu</include>
+					<include condition="!System.HasAddon(script.skinshortcuts)">FallbackSubMenu</include>
+					<include condition="System.HasAddon(script.skinshortcuts)">CustomSubMenu</include>
 				</control>
 				<control type="button">
 					<posx>130</posx>

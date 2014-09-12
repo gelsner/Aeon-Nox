@@ -506,6 +506,10 @@
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.0.type)]</property>
 			<property name="MB.currentcollection">zero</property>
 			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.0.recent.path)]</property>
+			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.0.unwatched.path)]</property>
+			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.0.inprogress.path)]</property>
+			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.0.genre.path)]</property>
+			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.0.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_0))</visible>
 		</item>
 	</include>
@@ -517,6 +521,10 @@
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.1.type)]</property>
 			<property name="MB.currentcollection">one</property>
 			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.1.recent.path)]</property>
+			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.1.unwatched.path)]</property>
+			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.1.inprogress.path)]</property>
+			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.1.genre.path)]</property>
+			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.1.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_1))</visible>
 		</item>
 	</include>
@@ -528,6 +536,10 @@
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.2.type)]</property>
 			<property name="MB.currentcollection">two</property>
 			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.2.recent.path)]</property>
+			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.2.unwatched.path)]</property>
+			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.2.inprogress.path)]</property>
+			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.2.genre.path)]</property>
+			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.2.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_2))</visible>
 		</item>
 	</include>
@@ -539,6 +551,10 @@
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.3.type)]</property>
 			<property name="MB.currentcollection">three</property>
 			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.3.recent.path)]</property>
+			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.3.unwatched.path)]</property>
+			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.3.inprogress.path)]</property>
+			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.3.genre.path)]</property>
+			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.3.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_3))</visible>
 		</item>
 	</include>
@@ -550,6 +566,10 @@
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.4.type)]</property>
 			<property name="MB.currentcollection">four</property>
 			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.4.recent.path)]</property>
+			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.4.unwatched.path)]</property>
+			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.4.inprogress.path)]</property>
+			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.4.genre.path)]</property>
+			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.4.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_4))</visible>
 		</item>
 	</include>
@@ -561,6 +581,10 @@
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.5.type)]</property>
 			<property name="MB.currentcollection">five</property>
 			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.5.recent.path)]</property>
+			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.5.unwatched.path)]</property>
+			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.5.inprogress.path)]</property>
+			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.5.genre.path)]</property>
+			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.5.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_5))</visible>
 		</item>
 	</include>
@@ -572,6 +596,10 @@
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.6.type)]</property>
 			<property name="MB.currentcollection">six</property>
 			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.6.recent.path)]</property>
+			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.6.unwatched.path)]</property>
+			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.6.inprogress.path)]</property>
+			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.6.genre.path)]</property>
+			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.6.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_6))</visible>
 		</item>
 	</include>
@@ -583,6 +611,10 @@
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.7.type)]</property>
 			<property name="MB.currentcollection">seven</property>
 			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.7.recent.path)]</property>
+			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.7.unwatched.path)]</property>
+			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.7.inprogress.path)]</property>
+			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.7.genre.path)]</property>
+			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.7.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_7))</visible>
 		</item>
 	</include>
@@ -594,6 +626,10 @@
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.8.type)]</property>
 			<property name="MB.currentcollection">eight</property>
 			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.8.recent.path)]</property>
+			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.8.unwatched.path)]</property>
+			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.8.inprogress.path)]</property>
+			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.8.genre.path)]</property>
+			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.8.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_8))</visible>
 		</item>
 	</include>
@@ -605,6 +641,10 @@
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.9.type)]</property>
 			<property name="MB.currentcollection">nine</property>
 			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.9.recent.path)]</property>
+			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.9.unwatched.path)]</property>
+			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.9.inprogress.path)]</property>
+			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.9.genre.path)]</property>
+			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.9.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_9))</visible>
 		</item>
 	</include>
@@ -616,6 +656,10 @@
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.10.type)]</property>
 			<property name="MB.currentcollection">ten</property>
 			<property name="MB.recent.action">$INFO[Window.Property(xbmb3c.10.recent.path)]</property>
+			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.10.unwatched.path)]</property>
+			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.10.inprogress.path)]</property>
+			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.10.genre.path)]</property>
+			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.10.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_10))</visible>
 		</item>
 	</include>
@@ -1079,11 +1123,46 @@
 	</include>
 
 	<include name="xbmb3c-submenu-items">
+		<!-- recently added -->
 		<item>
-			<!-- recently added -->
 			<label>$LOCALIZE[31328]</label>
 			<visible>!IsEmpty(Container(9000).ListItem.Property(MB.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), musicvideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), music)]</visible>
 			<onclick>$INFO[Container(9000).ListItem.Property(MB.recent.action)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>
+		<!-- unwatched -->
+		<item>
+			<label>$LOCALIZE[16101]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(MB.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), musicvideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos)]</visible>
+			<onclick>$INFO[Container(9000).ListItem.Property(MB.unwatched.action)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>
+		<!-- Actors -->
+		<!--<item>
+			<label>$LOCALIZE[344]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(MB.currentmediatype)) + StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies)</visible>
+			<onclick>$INFO[Window.Property(xbmb3c.std.movies.9.path)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>-->
+		<!-- Next episodes -->
+		<item>
+			<label>$LOCALIZE[32001]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(MB.currentmediatype)) + StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows)</visible>
+			<onclick>$INFO[Container(9000).ListItem.Property(MB.nextepisodes.action)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>
+		<!-- In progress -->
+		<item>
+			<label>$LOCALIZE[575]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(MB.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), musicvideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos)]</visible>
+			<onclick>$INFO[Container(9000).ListItem.Property(MB.inprogress.action)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>
+		<!-- genre -->
+		<item>
+			<label>$LOCALIZE[515]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(MB.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), music)]</visible>
+			<onclick>$INFO[Container(9000).ListItem.Property(MB.genre.action)]</onclick>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>

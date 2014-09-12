@@ -531,3 +531,10 @@ msgstr "SYSTEM"
 msgctxt "#31960"
 msgid "CONCERTS"
 msgstr "KONZERTE"
+
+
+#XBMB3c-strings
+
+msgctxt "#32001"
+msgid "Next episodes"
+msgstr "Nächste Episoden"

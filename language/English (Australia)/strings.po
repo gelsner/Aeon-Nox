@@ -335,3 +335,10 @@ msgstr "PLAY DISC"
 msgctxt "#31959"
 msgid "SYSTEM"
 msgstr "SYSTEM"
+
+
+#XBMB3c-strings
+
+msgctxt "#32001"
+msgid "Next episodes"
+msgstr "Next episodes"

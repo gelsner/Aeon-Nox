@@ -60,7 +60,7 @@
 						<align>center</align>
 						<font>IconTiny</font>
 						<textcolor>grey</textcolor>
-						<visible>System.HasAddon(script.globalsearch) | Skin.HasSetting(xbmb3c)</visible>
+						<visible>System.HasAddon(script.globalsearch) | !Skin.HasSetting(disable.xbmb3c)</visible>
 						<onclick>$VAR[searchmethod]</onclick>
 						<animation type="Visible">
 							<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />

@@ -449,6 +449,7 @@
 						<font>font15</font>
 						<label>31943</label>
 						<onclick>ActivateWindow(1127)</onclick>
+						<visible>Skin.HasSetting(disable.xbmb3c)</visible>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
 					<control type="button" id="405">
@@ -466,10 +467,10 @@
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
-						<label>Media Browser Mode</label>
-						<onclick>Skin.ToggleSetting(xbmb3c)</onclick>
+						<label>32100</label>
+						<onclick>Skin.ToggleSetting(disable.xbmb3c)</onclick>
 						<onclick>Skin.Reset(defaultsettings)</onclick>
-						<selected>Skin.HasSetting(xbmb3c)</selected>
+						<selected>Skin.HasSetting(disable.xbmb3c)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
 				</control>

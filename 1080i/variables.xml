@@ -590,7 +590,7 @@
 	</variable>
 
 	<variable name="searchmethod">
-		<value condition="Skin.HasSetting(xbmb3c)">RunPlugin(plugin://plugin.video.xbmb3c?mode=18)</value>
-		<value condition="!Skin.HasSetting(xbmb3c)">RunAddon(script.globalsearch)</value>
+		<value condition="!Skin.HasSetting(disable.xbmb3c)">RunPlugin(plugin://plugin.video.xbmb3c?mode=18)</value>
+		<value condition="Skin.HasSetting(disable.xbmb3c)">RunAddon(script.globalsearch)</value>
 	</variable>
 </includes>

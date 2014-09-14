@@ -841,3 +841,8 @@ msgstr ""
 msgctxt "#32001"
 msgid "Next episodes"
 msgstr "Next episodes"
+
+msgctxt "#32100"
+msgid "Disable Media Browser Mode"
+msgstr "Disable Media Browser Mode"
+

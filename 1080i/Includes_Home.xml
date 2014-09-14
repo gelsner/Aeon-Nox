@@ -225,7 +225,7 @@
 	</include>
 	<include name="MoviesMainMenu">
 		<item id="10">
-			<visible>!Skin.HasSetting(xbmb3c)</visible>
+			<visible>Skin.HasSetting(disable.xbmb3c)</visible>
 			<label fallback="31954">$INFO[Skin.String(MovieHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultMovies.png">$INFO[Skin.String(MovieHomeItem.Icon)]</icon>
@@ -243,7 +243,7 @@
 	</include>
 	<include name="TVShowsMainMenu">
 		<item id="11">
-			<visible>!Skin.HasSetting(xbmb3c)</visible>
+			<visible>Skin.HasSetting(disable.xbmb3c)</visible>
 			<label fallback="31955">$INFO[Skin.String(TVShowHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultTVShows.png">$INFO[Skin.String(TVShowHomeItem.Icon)]</icon>
@@ -380,7 +380,7 @@
 	</include>
 	<include name="MusicVideosMainMenu">
 		<item id="13">
-			<visible>!Skin.HasSetting(xbmb3c)</visible>
+			<visible>Skin.HasSetting(disable.xbmb3c)</visible>
 			<label fallback="31960">$INFO[Skin.String(MusicVideoHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultMusicVideos.png">$INFO[Skin.String(MusicVideoHomeItem.Icon)]</icon>
@@ -684,17 +684,17 @@
 			<include condition="IsEmpty(Skin.String(FavoritesHomeItem.Disable))">FavoritesMainMenu</include>
 			<include condition="IsEmpty(Skin.String(WeatherHomeItem.Disable))">WeatherMainMenu</include>
 			<include condition="IsEmpty(Skin.String(MusicVideoHomeItem.Disable))">MusicVideosMainMenu</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem0</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem1</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem2</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem3</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem4</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem5</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem6</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem7</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem8</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem9</include>
-			<include condition="Skin.HasSetting(xbmb3c)">XBMB3CMenuItem10</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem0</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem1</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem2</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem3</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem4</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem5</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem6</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem7</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem8</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem9</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem10</include>
 		</content>
 	</include>
 

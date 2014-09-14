@@ -538,3 +538,7 @@ msgstr "KONZERTE"
 msgctxt "#32001"
 msgid "Next episodes"
 msgstr "Nächste Episoden"
+
+msgctxt "#32100"
+msgid "Disable Media Browser Mode"
+msgstr "Deaktiviere 'Media Browser'-Modus"

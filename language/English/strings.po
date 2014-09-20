@@ -851,5 +851,13 @@ msgid "Disable Media Browser Mode"
 msgstr "Disable Media Browser Mode"
 
 msgctxt "#32101"
+msgid "Enable Media Browser Mode for music"
+msgstr "Enable Media Browser Mode for music"
+
+msgctxt "#32102"
+msgid "Enable Media Browser Mode for pictures"
+msgstr "Enable Media Browser Mode for pictures"
+
+msgctxt "#32105"
 msgid "Disable grouping of movies in collections"
 msgstr "Disable grouping of movies in collections"

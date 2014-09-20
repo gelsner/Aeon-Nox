@@ -191,6 +191,7 @@
 	<!--Main Menu-->
 	<include name="PicturesMainMenu">
 		<item id="4">
+			<visible>Skin.HasSetting(disable.xbmb3c) | [!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(enable.xbmb3c.pictures)]</visible>
 			<label fallback="31951">$INFO[Skin.String(PicturesHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultPicture.png">$INFO[Skin.String(PicturesHomeItem.Icon)]</icon>
@@ -208,6 +209,7 @@
 	</include>
 	<include name="MusicMainMenu">
 		<item id="3">
+			<visible>Skin.HasSetting(disable.xbmb3c) | [!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(enable.xbmb3c.music)]</visible>
 			<label fallback="31956">$INFO[Skin.String(MusicHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultAddonMusic.png">$INFO[Skin.String(MusicHomeItem.Icon)]</icon>
@@ -695,17 +697,17 @@
 			<include condition="IsEmpty(Skin.String(FavoritesHomeItem.Disable))">FavoritesMainMenu</include>
 			<include condition="IsEmpty(Skin.String(WeatherHomeItem.Disable))">WeatherMainMenu</include>
 			<include condition="IsEmpty(Skin.String(MusicVideoHomeItem.Disable))">MusicVideosMainMenu</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem0</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem1</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem2</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem3</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem4</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem5</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem6</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem7</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem8</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem9</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c)">XBMB3CMenuItem10</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[StringCompare(Window(Home).Property(xbmb3c.0.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.0.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.0.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)]">XBMB3CMenuItem0</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[StringCompare(Window(Home).Property(xbmb3c.1.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.1.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.1.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)]">XBMB3CMenuItem1</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[StringCompare(Window(Home).Property(xbmb3c.2.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.2.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.2.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)]">XBMB3CMenuItem2</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[StringCompare(Window(Home).Property(xbmb3c.3.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.3.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.3.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)]">XBMB3CMenuItem3</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[StringCompare(Window(Home).Property(xbmb3c.4.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.4.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.4.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)]">XBMB3CMenuItem4</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[StringCompare(Window(Home).Property(xbmb3c.5.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.5.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.5.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)]">XBMB3CMenuItem5</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[StringCompare(Window(Home).Property(xbmb3c.6.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.6.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.6.type), music) + !StringCompare(Window(Home).Property(xbmb3c.6.type), photos)]">XBMB3CMenuItem6</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[StringCompare(Window(Home).Property(xbmb3c.7.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.7.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.7.type), music) + !StringCompare(Window(Home).Property(xbmb3c.7.type), photos)]">XBMB3CMenuItem7</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[StringCompare(Window(Home).Property(xbmb3c.8.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.8.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.8.type), music) + !StringCompare(Window(Home).Property(xbmb3c.8.type), photos)]">XBMB3CMenuItem8</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[StringCompare(Window(Home).Property(xbmb3c.9.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.9.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.9.type), music) + !StringCompare(Window(Home).Property(xbmb3c.9.type), photos)]">XBMB3CMenuItem9</include>
+			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[StringCompare(Window(Home).Property(xbmb3c.10.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.10.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.10.type), music) + !StringCompare(Window(Home).Property(xbmb3c.10.type), photos)]">XBMB3CMenuItem10</include>
 		</content>
 	</include>
 

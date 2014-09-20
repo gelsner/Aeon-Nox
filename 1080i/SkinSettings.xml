@@ -498,10 +498,35 @@
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>32101</label>
+						<onclick>Skin.ToggleSetting(enable.xbmb3c.music)</onclick>
+						<onclick>Skin.Reset(defaultsettings)</onclick>
+						<selected>Skin.HasSetting(enable.xbmb3c.music)</selected>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
+					</control>
+					<control type="radiobutton" id="503">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>32102</label>
+						<onclick>Skin.ToggleSetting(enable.xbmb3c.pictures)</onclick>
+						<onclick>Skin.Reset(defaultsettings)</onclick>
+						<selected>Skin.HasSetting(enable.xbmb3c.pictures)</selected>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
+					</control>
+					<control type="radiobutton" id="504">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>32105</label>
 						<onclick>Skin.ToggleSetting(disable.groups)</onclick>
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(disable.groups)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
+						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
 					</control>
 				</control>
 			</control>

@@ -501,7 +501,7 @@
 	<include name="XBMB3CMenuItem0">
 		<item id="700">
 			<label>$INFO[Window(Home).Property(xbmb3c.0.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.0.path)]</onclick>
+			<onclick>$VAR[item0.action]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.0.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.0.type)]</property>
 			<property name="MB.currentcollection">zero</property>
@@ -509,6 +509,7 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.0.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.0.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.0.genre.path)]</property>
+			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.0.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.0.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_0))</visible>
 		</item>
@@ -516,7 +517,7 @@
 	<include name="XBMB3CMenuItem1">
 		<item id="701">
 			<label>$INFO[Window(Home).Property(xbmb3c.1.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.1.path)]</onclick>
+			<onclick>$VAR[item1.action]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.1.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.1.type)]</property>
 			<property name="MB.currentcollection">one</property>
@@ -524,6 +525,7 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.1.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.1.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.1.genre.path)]</property>
+			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.1.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.1.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_1))</visible>
 		</item>
@@ -531,7 +533,7 @@
 	<include name="XBMB3CMenuItem2">
 		<item id="702">
 			<label>$INFO[Window(Home).Property(xbmb3c.2.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.2.path)]</onclick>
+			<onclick>$VAR[item2.action]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.2.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.2.type)]</property>
 			<property name="MB.currentcollection">two</property>
@@ -539,6 +541,7 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.2.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.2.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.2.genre.path)]</property>
+			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.2.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.2.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_2))</visible>
 		</item>
@@ -546,7 +549,7 @@
 	<include name="XBMB3CMenuItem3">
 		<item id="703">
 			<label>$INFO[Window(Home).Property(xbmb3c.3.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.3.path)]</onclick>
+			<onclick>$VAR[item3.action]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.3.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.3.type)]</property>
 			<property name="MB.currentcollection">three</property>
@@ -554,6 +557,7 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.3.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.3.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.3.genre.path)]</property>
+			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.3.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.3.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_3))</visible>
 		</item>
@@ -561,7 +565,7 @@
 	<include name="XBMB3CMenuItem4">
 		<item id="704">
 			<label>$INFO[Window(Home).Property(xbmb3c.4.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.4.path)]</onclick>
+			<onclick>$VAR[item4.action]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.4.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.4.type)]</property>
 			<property name="MB.currentcollection">four</property>
@@ -569,6 +573,7 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.4.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.4.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.4.genre.path)]</property>
+			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.4.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.4.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_4))</visible>
 		</item>
@@ -576,7 +581,7 @@
 	<include name="XBMB3CMenuItem5">
 		<item id="705">
 			<label>$INFO[Window(Home).Property(xbmb3c.5.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.5.path)]</onclick>
+			<onclick>$VAR[item5.action]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.5.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.5.type)]</property>
 			<property name="MB.currentcollection">five</property>
@@ -584,6 +589,7 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.5.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.5.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.5.genre.path)]</property>
+			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.5.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.5.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_5))</visible>
 		</item>
@@ -591,7 +597,7 @@
 	<include name="XBMB3CMenuItem6">
 		<item id="706">
 			<label>$INFO[Window(Home).Property(xbmb3c.6.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.6.path)]</onclick>
+			<onclick>$VAR[item6.action]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.6.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.6.type)]</property>
 			<property name="MB.currentcollection">six</property>
@@ -599,6 +605,7 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.6.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.6.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.6.genre.path)]</property>
+			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.6.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.6.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_6))</visible>
 		</item>
@@ -606,7 +613,7 @@
 	<include name="XBMB3CMenuItem7">
 		<item id="707">
 			<label>$INFO[Window(Home).Property(xbmb3c.7.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.7.path)]</onclick>
+			<onclick>$VAR[item7.action]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.7.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.7.type)]</property>
 			<property name="MB.currentcollection">seven</property>
@@ -614,6 +621,7 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.7.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.7.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.7.genre.path)]</property>
+			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.7.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.7.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_7))</visible>
 		</item>
@@ -621,7 +629,7 @@
 	<include name="XBMB3CMenuItem8">
 		<item id="708">
 			<label>$INFO[Window(Home).Property(xbmb3c.8.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.8.path)]</onclick>
+			<onclick>$VAR[item8.action]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.8.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.8.type)]</property>
 			<property name="MB.currentcollection">eight</property>
@@ -629,6 +637,7 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.8.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.8.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.8.genre.path)]</property>
+			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.8.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.8.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_8))</visible>
 		</item>
@@ -636,7 +645,7 @@
 	<include name="XBMB3CMenuItem9">
 		<item id="709">
 			<label>$INFO[Window(Home).Property(xbmb3c.9.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.9.path)]</onclick>
+			<onclick>$VAR[item9.action]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.9.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.9.type)]</property>
 			<property name="MB.currentcollection">nine</property>
@@ -644,6 +653,7 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.9.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.9.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.9.genre.path)]</property>
+			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.9.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.9.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_9))</visible>
 		</item>
@@ -651,7 +661,7 @@
 	<include name="XBMB3CMenuItem10">
 		<item id="710">
 			<label>$INFO[Window(Home).Property(xbmb3c.10.title)]</label>
-			<onclick>$INFO[Window(Home).Property(xbmb3c.10.path)]</onclick>
+			<onclick>$VAR[item10.action]</onclick>
 			<thumb>$INFO[Window(Home).Property(xbmb3c.10.fanart)]</thumb>
 			<property name="MB.currentmediatype">$INFO[Window(Home).Property(xbmb3c.10.type)]</property>
 			<property name="MB.currentcollection">ten</property>
@@ -659,6 +669,7 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.10.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.10.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.10.genre.path)]</property>
+			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.10.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.10.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_10))</visible>
 		</item>
@@ -705,14 +716,14 @@
 			<onclick>ActivateWindow(Videos,Movies,root)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>Library.HasContent(Movies) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
+			<visible>Library.HasContent(Movies) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2) + Skin.HasSetting(disable.xbmb3c)</visible>
 		</item>
 		<item>
 			<label>20343</label>
 			<onclick>ActivateWindow(Videos,TvShows,root)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>Library.HasContent(TVShows) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
+			<visible>Library.HasContent(TVShows) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2) + Skin.HasSetting(disable.xbmb3c)</visible>
 		</item>
 		<item>
 			<label>24001</label>
@@ -740,7 +751,7 @@
 			<onclick>ActivateWindow(Videos,Root)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>Library.HasContent(Video) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2)</visible>
+			<visible>Library.HasContent(Video) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2) + Skin.HasSetting(disable.xbmb3c)</visible>
 		</item>
 	</include>
 	<include name="HomeSubMenuMovies">
@@ -1123,6 +1134,13 @@
 	</include>
 
 	<include name="xbmb3c-submenu-items">
+		<!-- boxsets -->
+		<item>
+			<label>$LOCALIZE[32002]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(MB.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos)]</visible>
+			<onclick>$INFO[Container(9000).ListItem.Property(MB.boxset.action)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>
 		<!-- recently added -->
 		<item>
 			<label>$LOCALIZE[31328]</label>

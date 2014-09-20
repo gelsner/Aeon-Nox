@@ -96,6 +96,11 @@
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
+					<item id="5">
+						<label>Mediabrowser</label>
+						<onclick>noop</onclick>
+						<icon>-</icon>
+					</item>
 					<!--<item id="5">
 						<label>1</label>
 						<onclick>noop</onclick>
@@ -462,7 +467,21 @@
 						<onclick>Skin.ToggleSetting(Enable.SlimList)</onclick>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
-					<control type="radiobutton" id="406">
+				</control>
+				<control type="grouplist" id="9005">
+					<description>control area</description>
+					<posx>522</posx>
+					<posy>32</posy>
+					<width>1316</width>
+					<height>720</height>
+					<itemgap>0</itemgap>
+					<pagecontrol>60</pagecontrol>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<onup>9005</onup>
+					<ondown>9005</ondown>
+					<visible>Container(9000).HasFocus(5)</visible>
+					<control type="radiobutton" id="501">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -471,6 +490,17 @@
 						<onclick>Skin.ToggleSetting(disable.xbmb3c)</onclick>
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(disable.xbmb3c)</selected>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+					</control>
+					<control type="radiobutton" id="502">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>32101</label>
+						<onclick>Skin.ToggleSetting(disable.groups)</onclick>
+						<onclick>Skin.Reset(defaultsettings)</onclick>
+						<selected>Skin.HasSetting(disable.groups)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
 				</control>

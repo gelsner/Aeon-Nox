@@ -69,20 +69,20 @@
 					</control>
 				</focusedlayout>
 				<content>
+						<include>SettingsMainMenu</include>
 						<include>PicturesMainMenu</include>
 						<include>MusicMainMenu</include>
 						<include>MoviesMainMenu</include>
 						<include>TVShowsMainMenu</include>
-						<include>TVMainMenu</include>
 						<include>CustomMainMenuItem1</include>
 						<include>CustomMainMenuItem2</include>
 						<include>CustomMainMenuItem3</include>
 						<include>CustomMainMenuItem4</include>
 						<include>CustomMainMenuItem5</include>
 						<include>CustomMainMenuItem6</include>
+						<include>TVMainMenu</include>
 						<include>VideosMainMenu</include>
 						<include>ProgramsMainMenu</include>
-						<include>SettingsMainMenu</include>
 						<include>ShutdownMainMenu</include>
 						<include>FavoritesMainMenu</include>
 						<include>WeatherMainMenu</include>
@@ -147,6 +147,7 @@
 					<onclick condition="!IsEmpty(Container(90000).ListItem.Property(Disable))">Skin.Reset($INFO[Container(90000).ListItem.Property(Item),,HomeItem.Disable])</onclick>
 					<selected>[Control.HasFocus(90010) + IsEmpty(Window(home).Property(Nox.Disable))] | [!Control.HasFocus(90010) + IsEmpty(Container(90000).ListItem.Property(Disable))]</selected>
 					<enable>!IsEmpty(Container(90000).ListItem.Property(Path))</enable>
+					<visible>Skin.HasSetting(disable.xbmb3c) | [!Skin.HasSetting(disable.xbmb3c) + !StringCompare(Container(90000).Position, 0)]</visible>
 				</control>
 				<control type="button" id="90011">
 					<description>Edit Label Button</description>

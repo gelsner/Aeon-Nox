@@ -511,7 +511,6 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.0.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.0.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.0.genre.path)]</property>
-			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.0.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.0.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_0)) + [!StringCompare(Window(Home).Property(xbmb3c.0.type), boxsets) | [StringCompare(Window(Home).Property(xbmb3c.0.type), boxsets) + !Skin.HasSetting(hide.collections)]]</visible>
 		</item>
@@ -527,7 +526,6 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.1.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.1.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.1.genre.path)]</property>
-			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.1.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.1.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_1)) + [!StringCompare(Window(Home).Property(xbmb3c.1.type), boxsets) | [StringCompare(Window(Home).Property(xbmb3c.1.type), boxsets) + !Skin.HasSetting(hide.collections)]]</visible>
 		</item>
@@ -543,7 +541,6 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.2.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.2.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.2.genre.path)]</property>
-			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.2.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.2.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_2)) + [!StringCompare(Window(Home).Property(xbmb3c.2.type), boxsets) | [StringCompare(Window(Home).Property(xbmb3c.2.type), boxsets) + !Skin.HasSetting(hide.collections)]]</visible>
 		</item>
@@ -559,7 +556,6 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.3.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.3.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.3.genre.path)]</property>
-			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.3.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.3.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_3)) + [!StringCompare(Window(Home).Property(xbmb3c.3.type), boxsets) | [StringCompare(Window(Home).Property(xbmb3c.3.type), boxsets) + !Skin.HasSetting(hide.collections)]]</visible>
 		</item>
@@ -575,7 +571,6 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.4.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.4.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.4.genre.path)]</property>
-			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.4.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.4.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_4)) + [!StringCompare(Window(Home).Property(xbmb3c.4.type), boxsets) | [StringCompare(Window(Home).Property(xbmb3c.4.type), boxsets) + !Skin.HasSetting(hide.collections)]]</visible>
 		</item>
@@ -591,7 +586,6 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.5.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.5.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.5.genre.path)]</property>
-			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.5.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.5.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_5)) + [!StringCompare(Window(Home).Property(xbmb3c.5.type), boxsets) | [StringCompare(Window(Home).Property(xbmb3c.5.type), boxsets) + !Skin.HasSetting(hide.collections)]]</visible>
 		</item>
@@ -607,7 +601,6 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.6.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.6.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.6.genre.path)]</property>
-			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.6.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.6.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_6)) + [!StringCompare(Window(Home).Property(xbmb3c.6.type), boxsets) | [StringCompare(Window(Home).Property(xbmb3c.6.type), boxsets) + !Skin.HasSetting(hide.collections)]]</visible>
 		</item>
@@ -623,7 +616,6 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.7.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.7.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.7.genre.path)]</property>
-			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.7.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.7.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_7)) + [!StringCompare(Window(Home).Property(xbmb3c.7.type), boxsets) | [StringCompare(Window(Home).Property(xbmb3c.7.type), boxsets) + !Skin.HasSetting(hide.collections)]]</visible>
 		</item>
@@ -639,7 +631,6 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.8.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.8.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.8.genre.path)]</property>
-			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.8.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.8.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_8)) + [!StringCompare(Window(Home).Property(xbmb3c.8.type), boxsets) | [StringCompare(Window(Home).Property(xbmb3c.8.type), boxsets) + !Skin.HasSetting(hide.collections)]]</visible>
 		</item>
@@ -655,7 +646,6 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.9.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.9.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.9.genre.path)]</property>
-			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.9.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.9.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_9)) + [!StringCompare(Window(Home).Property(xbmb3c.9.type), boxsets) | [StringCompare(Window(Home).Property(xbmb3c.9.type), boxsets) + !Skin.HasSetting(hide.collections)]]</visible>
 		</item>
@@ -671,7 +661,6 @@
 			<property name="MB.unwatched.action">$INFO[Window.Property(xbmb3c.10.unwatched.path)]</property>
 			<property name="MB.inprogress.action">$INFO[Window.Property(xbmb3c.10.inprogress.path)]</property>
 			<property name="MB.genre.action">$INFO[Window.Property(xbmb3c.10.genre.path)]</property>
-			<property name="MB.boxset.action">$INFO[Window.Property(xbmb3c.10.boxset.path)]</property>
 			<property name="MB.nextepisodes.action">$INFO[Window.Property(xbmb3c.10.nextepisodes.path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_10)) + [!StringCompare(Window(Home).Property(xbmb3c.10.type), boxsets) | [StringCompare(Window(Home).Property(xbmb3c.10.type), boxsets) + !Skin.HasSetting(hide.collections)]]</visible>
 		</item>
@@ -683,20 +672,7 @@
 			<include condition="IsEmpty(Skin.String(MusicHomeItem.Disable))">MusicMainMenu</include>
 			<include condition="IsEmpty(Skin.String(MovieHomeItem.Disable))">MoviesMainMenu</include>
 			<include condition="IsEmpty(Skin.String(TVShowHomeItem.Disable))">TVShowsMainMenu</include>
-			<include condition="IsEmpty(Skin.String(LiveTVHomeItem.Disable))">TVMainMenu</include>
-			<include condition="IsEmpty(Skin.String(Custom1HomeItem.Disable)) + !IsEmpty(Skin.String(Custom1HomeItem.Path))">CustomMainMenuItem1</include>
-			<include condition="IsEmpty(Skin.String(Custom2HomeItem.Disable)) + !IsEmpty(Skin.String(Custom2HomeItem.Path))">CustomMainMenuItem2</include>
-			<include condition="IsEmpty(Skin.String(Custom3HomeItem.Disable)) + !IsEmpty(Skin.String(Custom3HomeItem.Path))">CustomMainMenuItem3</include>
-			<include condition="IsEmpty(Skin.String(Custom4HomeItem.Disable)) + !IsEmpty(Skin.String(Custom4HomeItem.Path))">CustomMainMenuItem4</include>
-			<include condition="IsEmpty(Skin.String(Custom5HomeItem.Disable)) + !IsEmpty(Skin.String(Custom5HomeItem.Path))">CustomMainMenuItem5</include>
-			<include condition="IsEmpty(Skin.String(Custom6HomeItem.Disable)) + !IsEmpty(Skin.String(Custom6HomeItem.Path))">CustomMainMenuItem6</include>
-			<include condition="IsEmpty(Skin.String(VideosHomeItem.Disable))">VideosMainMenu</include>
-			<include condition="IsEmpty(Skin.String(ProgramsHomeItem.Disable))">ProgramsMainMenu</include>
-			<include condition="IsEmpty(Skin.String(SettingsHomeItem.Disable))">SettingsMainMenu</include>
-			<include condition="IsEmpty(Skin.String(ShutdownHomeItem.Disable))">ShutdownMainMenu</include>
-			<include condition="IsEmpty(Skin.String(FavoritesHomeItem.Disable))">FavoritesMainMenu</include>
-			<include condition="IsEmpty(Skin.String(WeatherHomeItem.Disable))">WeatherMainMenu</include>
-			<include condition="IsEmpty(Skin.String(MusicVideoHomeItem.Disable))">MusicVideosMainMenu</include>
+			<include condition="[IsEmpty(Skin.String(SettingsHomeItem.Disable)) + Skin.HasSetting(disable.xbmb3c)] | !Skin.HasSetting(disable.xbmb3c)">SettingsMainMenu</include>
 			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[[StringCompare(Window(Home).Property(xbmb3c.0.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.0.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.0.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)]]">XBMB3CMenuItem0</include>
 			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[[StringCompare(Window(Home).Property(xbmb3c.1.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.1.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.1.type), music) + !StringCompare(Window(Home).Property(xbmb3c.1.type), photos)]]">XBMB3CMenuItem1</include>
 			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[[StringCompare(Window(Home).Property(xbmb3c.2.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.2.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.2.type), music) + !StringCompare(Window(Home).Property(xbmb3c.2.type), photos)]]">XBMB3CMenuItem2</include>
@@ -708,6 +684,19 @@
 			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[[StringCompare(Window(Home).Property(xbmb3c.8.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.8.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.8.type), music) + !StringCompare(Window(Home).Property(xbmb3c.8.type), photos)]]">XBMB3CMenuItem8</include>
 			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[[StringCompare(Window(Home).Property(xbmb3c.9.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.9.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.9.type), music) + !StringCompare(Window(Home).Property(xbmb3c.9.type), photos)]]">XBMB3CMenuItem9</include>
 			<include condition="!Skin.HasSetting(disable.xbmb3c) + [[[StringCompare(Window(Home).Property(xbmb3c.10.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.10.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.10.type), music) + !StringCompare(Window(Home).Property(xbmb3c.10.type), photos)]]">XBMB3CMenuItem10</include>
+			<include condition="IsEmpty(Skin.String(Custom1HomeItem.Disable)) + !IsEmpty(Skin.String(Custom1HomeItem.Path))">CustomMainMenuItem1</include>
+			<include condition="IsEmpty(Skin.String(Custom2HomeItem.Disable)) + !IsEmpty(Skin.String(Custom2HomeItem.Path))">CustomMainMenuItem2</include>
+			<include condition="IsEmpty(Skin.String(Custom3HomeItem.Disable)) + !IsEmpty(Skin.String(Custom3HomeItem.Path))">CustomMainMenuItem3</include>
+			<include condition="IsEmpty(Skin.String(Custom4HomeItem.Disable)) + !IsEmpty(Skin.String(Custom4HomeItem.Path))">CustomMainMenuItem4</include>
+			<include condition="IsEmpty(Skin.String(Custom5HomeItem.Disable)) + !IsEmpty(Skin.String(Custom5HomeItem.Path))">CustomMainMenuItem5</include>
+			<include condition="IsEmpty(Skin.String(Custom6HomeItem.Disable)) + !IsEmpty(Skin.String(Custom6HomeItem.Path))">CustomMainMenuItem6</include>
+			<include condition="IsEmpty(Skin.String(LiveTVHomeItem.Disable))">TVMainMenu</include>
+			<include condition="IsEmpty(Skin.String(VideosHomeItem.Disable))">VideosMainMenu</include>
+			<include condition="IsEmpty(Skin.String(ProgramsHomeItem.Disable))">ProgramsMainMenu</include>
+			<include condition="IsEmpty(Skin.String(ShutdownHomeItem.Disable))">ShutdownMainMenu</include>
+			<include condition="IsEmpty(Skin.String(FavoritesHomeItem.Disable))">FavoritesMainMenu</include>
+			<include condition="IsEmpty(Skin.String(WeatherHomeItem.Disable))">WeatherMainMenu</include>
+			<include condition="IsEmpty(Skin.String(MusicVideoHomeItem.Disable))">MusicVideosMainMenu</include>
 		</content>
 	</include>
 
@@ -1136,13 +1125,6 @@
 	</include>
 
 	<include name="xbmb3c-submenu-items">
-		<!-- boxsets -->
-		<item>
-			<label>$LOCALIZE[32002]</label>
-			<visible>!IsEmpty(Container(9000).ListItem.Property(MB.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos)]</visible>
-			<onclick>$INFO[Container(9000).ListItem.Property(MB.boxset.action)]</onclick>
-			<property name="isSubmenu">True</property>
-		</item>
 		<!-- recently added -->
 		<item>
 			<label>$LOCALIZE[31328]</label>

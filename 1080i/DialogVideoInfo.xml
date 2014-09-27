@@ -774,12 +774,12 @@
 						<height>58</height>
 						<texture border="1">separator3.png</texture>
 					</control>
-					<control type="button" id="10">
+					<!--<control type="button" id="10">
 						<description>Get Thumb</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>13511</label>
 						<enable>!Skin.HasSetting(KioskMode.Enabled)</enable>
-					</control>
+					</control>-->
 					<control type="image" id="202">
 						<width>2</width>
 						<height>58</height>

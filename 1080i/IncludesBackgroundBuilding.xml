@@ -100,7 +100,7 @@
 			</content>
 		</control>
 		<control type="multiimage">
-			<imagepath background="true">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</imagepath>
+			<imagepath background="true" fallback="special://skin/backgrounds/default_bg.jpg">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</imagepath>
 			<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
 		</control>
 		<control type="group">

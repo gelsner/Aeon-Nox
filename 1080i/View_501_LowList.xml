@@ -754,6 +754,17 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<textoffsetx>15</textoffsetx>
+						<visible>IsEmpty(Window(home).Property(recentlyadded))</visible>
+					</control>
+					<control type="label">
+						<width>730</width>
+						<height>68</height>
+						<font>font15</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Label]</label>
+						<textoffsetx>15</textoffsetx>
+						<visible>!IsEmpty(Window(home).Property(recentlyadded))</visible>
 					</control>
 					<control type="label">
 						<posx>730</posx>
@@ -798,6 +809,17 @@
 						<label>$INFO[ListItem.Label]</label>
 						<textoffsetx>15</textoffsetx>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(501)">Conditional</animation>
+						<visible>IsEmpty(Window(home).Property(recentlyadded))</visible>
+					</control>
+					<control type="label">
+						<width>730</width>
+						<height>68</height>
+						<font>font15</font>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Label]</label>
+						<textoffsetx>15</textoffsetx>
+						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(501)">Conditional</animation>
+						<visible>!IsEmpty(Window(home).Property(recentlyadded))</visible>
 					</control>
 					<control type="label">
 						<posx>730</posx>

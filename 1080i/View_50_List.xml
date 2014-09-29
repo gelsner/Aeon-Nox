@@ -260,6 +260,20 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
+							<visible>IsEmpty(Window(home).Property(recentlyadded))</visible>
+						</control>
+						<control type="label">
+							<posx>135</posx>
+							<posy>0</posy>
+							<width>790</width>
+							<height>70</height>
+							<font>font30</font>
+							<textcolor>grey2</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Label]</label>
+							<visible>!IsEmpty(Window(home).Property(recentlyadded))</visible>
 						</control>
 						<control type="label">
 							<posx>135</posx>
@@ -366,6 +380,21 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
+							<visible>IsEmpty(Window(home).Property(recentlyadded))</visible>
+						</control>
+						<control type="label">
+							<posx>135</posx>
+							<posy>0</posy>
+							<width>790</width>
+							<height>70</height>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Label]</label>
+							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
+							<visible>!IsEmpty(Window(home).Property(recentlyadded))</visible>
 						</control>
 						<control type="label">
 							<posx>135</posx>

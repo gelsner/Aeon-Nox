@@ -1129,6 +1129,7 @@
 		<item>
 			<label>$LOCALIZE[31328]</label>
 			<visible>!IsEmpty(Container(9000).ListItem.Property(MB.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), musicvideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), music)]</visible>
+			<onclick>SetProperty(recentlyadded,home)</onclick>
 			<onclick>$INFO[Container(9000).ListItem.Property(MB.recent.action)]</onclick>
 			<property name="isSubmenu">True</property>
 		</item>

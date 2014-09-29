@@ -190,15 +190,13 @@
 	</variable>
 
 	<variable name="VideoInfoPlotVar">
-		<value condition="Skin.HasSetting(VideoInfoPlotToggle) + !IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
-		<value>$INFO[ListItem.Plot]</value>
+		<value condition="Skin.HasSetting(disable.xbmb3c)">$INFO[ListItem.Plot]</value>
+		<value condition="!Skin.HasSetting(disable.xbmb3c)">$INFO[Window(Home).Property(MB3.Plot)]</value>
 	</variable>
 
 	<variable name="VideoPlotVar">
-		<value condition="Container.Content(seasons)">$INFO[Container.ShowPlot]</value>
-		<value condition="!IsEmpty(ListItem.PlotOutline) + !Skin.HasSetting(VideoInfoPlotToggle)">$INFO[ListItem.Tagline,[COLOR labelheader],[/COLOR] - ]$INFO[ListItem.PlotOutline]</value>
-		<value condition="System.GetBool(videolibrary.showunwatchedplots)">$INFO[ListItem.Tagline,[COLOR labelheader],[/COLOR] - ]$INFO[ListItem.Plot]</value>
-		<value>$INFO[ListItem.Plot]</value>
+		<value condition="Skin.HasSetting(disable.xbmb3c)">$INFO[ListItem.Plot]</value>
+		<value condition="!Skin.HasSetting(disable.xbmb3c)">$INFO[Window(Home).Property(MB3.Plot)]</value>
 	</variable>
 
 	<variable name="OtherPlotVar">

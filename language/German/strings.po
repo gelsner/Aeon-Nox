@@ -562,3 +562,7 @@ msgstr "Verstecke Sammlungen im Hauptmenü"
 msgctxt "#32105"
 msgid "Disable grouping of movies in collections"
 msgstr "Deaktiviere Gruppierung von Filmen in Sammlungen"
+
+msgctxt "#32106"
+msgid "Set Default Views"
+msgstr "Standardansichten setzen"

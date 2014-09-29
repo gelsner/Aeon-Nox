@@ -782,3 +782,7 @@ msgstr "Hide collections in main menu"
 msgctxt "#32105"
 msgid "Disable grouping of movies in collections"
 msgstr "Disable grouping of movies in collections"
+
+msgctxt "#32106"
+msgid "Set Default Views"
+msgstr "Set Default Views"

@@ -540,6 +540,18 @@
 						<texturenofocus border="1">separator5.png</texturenofocus>
 						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
 					</control>
+					<control type="button" id="506">
+						<label>32106</label>
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>32105</label>
+						<onclick>RunAddon(plugin.video.xbmb3c,"?mode=3&url=http%3a%2f%2fSETVIEWSSETVIEWS")</onclick>
+						<selected>Skin.HasSetting(disable.groups)</selected>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
+					</control>
 				</control>
 			</control>
 		</control>

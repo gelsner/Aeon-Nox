@@ -61,13 +61,13 @@
 					<include>VisibleFadeEffect</include>
 					<visible>!IsEmpty(ListItem.Genre)</visible>
 				</control>
-				<control type="button">
+				<!--<control type="button">
 					<label>[COLOR labelheader]$LOCALIZE[2050]:[/COLOR][CR]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<include>VisibleFadeEffect</include>
 					<visible>!IsEmpty(ListItem.Duration)</visible>
-				</control>
+				</control>-->
 			</control>
 
 			<control type="image">
@@ -916,12 +916,12 @@
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!IsEmpty(ListItem.Genre)</visible>
 				</control>
-				<control type="button">
+				<!--<control type="button">
 					<label>[COLOR labelheader]$LOCALIZE[180]:[/COLOR][CR]$INFO[ListItem.Duration]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
 					<visible>!IsEmpty(ListItem.Duration)</visible>
-				</control>
+				</control>-->
 				<control type="button">
 					<label>[COLOR labelheader]$LOCALIZE[21894]:[/COLOR][CR]$INFO[ListItem.Property(Artist_Formed)]</label>
 					<width>650</width>

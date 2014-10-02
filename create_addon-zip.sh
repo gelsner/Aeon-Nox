@@ -19,7 +19,7 @@ fi
 
 mkdir "/tmp/${ADDON_NAME}"
 
-rsync -av --exclude "*.git*" --exclude "*.DS_Store*" --exclude "*create_addon-zip.sh" "${ADDON_DIR}/" "/tmp/${ADDON_NAME}"
+rsync -av --exclude "*.git*" --exclude "*.DS_Store*" --exclude "*create_addon-zip.sh" --exclude "*.pyo" --exclude "*.pyc" "${ADDON_DIR}/" "/tmp/${ADDON_NAME}"
 
 pushd "/tmp"
 if [[ -e "/tmp/${ADDON_NAME}-${ADDON_VERSION}.zip" ]]; then

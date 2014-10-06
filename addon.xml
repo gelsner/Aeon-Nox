@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.aeon.nox5.gotham.xbmb3c"
-  version="5.0.0"
+  version="5.0.1"
   name="Aeon Nox 5 XBMB3C"
-  provider-name="BigNoid">
+  provider-name="BigNoid (modified by boywhosetsfire)">
 	<requires>
 		<import addon="xbmc.gui" version="5.0.0"/>
 		<import addon="script.grab.fanart" version="0.12.8"/>

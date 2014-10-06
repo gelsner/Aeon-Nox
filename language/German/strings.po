@@ -556,8 +556,12 @@ msgid "Enable Media Browser Mode for pictures"
 msgstr "Aktiviere 'Media Browser'-Modus für Bilder"
 
 msgctxt "#32103"
-msgid "Hide collections in main menu"
-msgstr "Verstecke Sammlungen im Hauptmenü"
+msgid "Hide"
+msgstr "Verstecke"
+
+msgctxt "#32104"
+msgid "in main menu"
+msgstr "im Hauptmenü"
 
 msgctxt "#32105"
 msgid "Disable grouping of movies in collections"

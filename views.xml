@@ -1,0 +1,14 @@
+﻿<views>
+    <view id="List" value="50" />
+    <view id="Info Wall" value="51" />
+    <view id="Landscape" value="52" />
+    <view id="Showcase" value="53" />
+    <view id="TriPanel" value="55" />
+    <view id="Posters" value="56" />
+    <view id="Shift" value="57" />
+    <view id="BannerWall" value="58" />
+    <view id="Logo" value="59" />
+    <view id="Wall" value="500" />
+    <view id="Low List" value="501" />
+    <view id="Episode" value="502" />    
+</views>

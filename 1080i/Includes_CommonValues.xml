@@ -286,4 +286,7 @@
 			</control>
 		</focusedlayout>
 	</include>
+	<include name="xbmb3c-actors">
+		<content target="video">$INFO[ListItem.Property(CastPluginLink)]</content>
+	</include>
 </includes>

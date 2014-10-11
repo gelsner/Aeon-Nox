@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=x1|x2|x3|x4|x5|x6|x7|x8|x9|x10|x11|x12|x13|x101|x202|x303|x404|x50​5|x606)</onload>
+	<onload>ClearProperty(recentlyadded,home)</onload>
 	<controls>
 		<include>CommonBackground</include>
 		<include condition="!Skin.HasSetting(Disable.Videoinfo)">NowPlayingVideoWidget</include>
@@ -67,8 +68,8 @@
 						<font>IconTiny</font>
 						<textcolor>grey</textcolor>
 						<shadowcolor>shadow</shadowcolor>
-						<visible>System.HasAddon(script.globalsearch)</visible>
-						<onclick>RunAddon(script.globalsearch)</onclick>
+						<visible>System.HasAddon(script.globalsearch) | !Skin.HasSetting(disable.xbmb3c)</visible>
+						<onclick>$VAR[searchmethod]</onclick>
 						<animation type="Visible">
 							<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
 							<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />

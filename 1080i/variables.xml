@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="GlobalBackgroundVar">
-		<value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart)">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart) + Skin.HasSetting(disable.xbmb3c)">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart) + !Skin.HasSetting(disable.xbmb3c)">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
 		<value condition="StringCompare(Container(9033).ListItem.Thumb,1)">$INFO[Window(Home).Property(script.grab.fanart.Movie.FanArt)]</value>
 		<value condition="StringCompare(Container(9033).ListItem.Thumb,2)">$INFO[Window(Home).Property(script.grab.fanart.TV.FanArt)]</value>
 		<value condition="StringCompare(Container(9033).ListItem.Thumb,3)">$INFO[Window(Home).Property(script.grab.fanart.Video.FanArt)]</value>
@@ -141,15 +142,12 @@
 		<value>$LOCALIZE[20360]</value>
 	</variable>
 	<variable name="VideoInfoPlotVar">
-		<value condition="Skin.HasSetting(VideoInfoPlotToggle) + !IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>
-		<value>$INFO[ListItem.Plot]</value>
+		<value condition="Skin.HasSetting(disable.xbmb3c)">$INFO[ListItem.Plot]</value>
+		<value condition="!Skin.HasSetting(disable.xbmb3c)">$INFO[Window(Home).Property(MB3.Plot)]</value>
 	</variable>
 	<variable name="VideoPlotVar">
-		<value condition="Container.Content(seasons)">$INFO[Container.ShowPlot]</value>
-		<value condition="!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot))">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
-		<value condition="!IsEmpty(ListItem.PlotOutline) + !Skin.HasSetting(VideoInfoPlotToggle)">$INFO[ListItem.Tagline,[COLOR labelheader],[/COLOR] - ]$INFO[ListItem.PlotOutline]</value>
-		<value condition="System.GetBool(videolibrary.showunwatchedplots)">$INFO[ListItem.Tagline,[COLOR labelheader],[/COLOR] - ]$INFO[ListItem.Plot]</value>
-		<value>$INFO[ListItem.Plot]</value>
+		<value condition="Skin.HasSetting(disable.xbmb3c)">$INFO[ListItem.Plot]</value>
+		<value condition="!Skin.HasSetting(disable.xbmb3c)">$INFO[Window(Home).Property(MB3.Plot)]</value>
 	</variable>
 	<variable name="OtherPlotVar">
 		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
@@ -434,7 +432,6 @@
 		<value>$INFO[Container(8000).ListItem.Icon]</value>
 	</variable>
 	<variable name="MainMenuLayoutVar">
-		<value condition="Skin.HasSetting(mainmenuicons)">$LOCALIZE[536]</value>
 		<value condition="Skin.HasSetting(biggergap)">3 $LOCALIZE[31025]</value>
 		<value>5 $LOCALIZE[31025]</value>
 	</variable>
@@ -557,5 +554,55 @@
 		<value condition="ListItem.IsSelected | ListItem.IsPlaying">selected</value>
 		<value condition="!StringCompare(ListItem.StarRating,rating0.png)">themecolor</value>
 		<value>white</value>
+	</variable>
+
+	<variable name="searchmethod">
+		<value condition="!Skin.HasSetting(disable.xbmb3c)">RunPlugin(plugin://plugin.video.xbmb3c?mode=18)</value>
+		<value condition="Skin.HasSetting(disable.xbmb3c)">RunAddon(script.globalsearch)</value>
+	</variable>
+
+	<variable name="item0.action">
+		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.0.collapsed.path)]</value>
+		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.0.path)]</value>
+	</variable>
+	<variable name="item1.action">
+		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.1.collapsed.path)]</value>
+		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.1.path)]</value>
+	</variable>
+	<variable name="item2.action">
+		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.2.collapsed.path)]</value>
+		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.2.path)]</value>
+	</variable>
+	<variable name="item3.action">
+		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.3.collapsed.path)]</value>
+		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.3.path)]</value>
+	</variable>
+	<variable name="item4.action">
+		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.4.collapsed.path)]</value>
+		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.4.path)]</value>
+	</variable>
+	<variable name="item5.action">
+		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.5.collapsed.path)]</value>
+		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.5.path)]</value>
+	</variable>
+	<variable name="item6.action">
+		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.6.collapsed.path)]</value>
+		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.6.path)]</value>
+	</variable>
+	<variable name="item7.action">
+		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.7.collapsed.path)]</value>
+		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.7.path)]</value>
+	</variable>
+	<variable name="item8.action">
+		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.8.collapsed.path)]</value>
+		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.8.path)]</value>
+	</variable>
+	<variable name="item9.action">
+		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.9.collapsed.path)]</value>
+		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.9.path)]</value>
+	</variable>
+	<variable name="item10.action">
+		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.10.collapsed.path)]</value>
+		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.10.path)]</value>
 	</variable>
 </includes>

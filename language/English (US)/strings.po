@@ -783,3 +783,42 @@ msgstr "SYSTEM"
 msgctxt "#31960"
 msgid "CONCERTS"
 msgstr "CONCERTS"
+
+
+#XBMB3c-strings
+
+msgctxt "#32001"
+msgid "Next episodes"
+msgstr "Next episodes"
+
+msgctxt "#32002"
+msgid "Boxsets"
+msgstr "Boxsets"
+
+msgctxt "#32100"
+msgid "Disable Media Browser Mode"
+msgstr "Disable Media Browser Mode"
+
+msgctxt "#32101"
+msgid "Enable Media Browser Mode for music"
+msgstr "Enable Media Browser Mode for music"
+
+msgctxt "#32102"
+msgid "Enable Media Browser Mode for pictures"
+msgstr "Enable Media Browser Mode for pictures"
+
+msgctxt "#32103"
+msgid "Hide"
+msgstr "Hide"
+
+msgctxt "#32104"
+msgid "in main menu"
+msgstr "in main menu"
+
+msgctxt "#32105"
+msgid "Disable grouping of movies in collections"
+msgstr "Disable grouping of movies in collections"
+
+msgctxt "#32106"
+msgid "Set Default Views"
+msgstr "Set Default Views"

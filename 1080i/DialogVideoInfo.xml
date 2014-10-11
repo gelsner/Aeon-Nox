@@ -720,6 +720,7 @@
 							<animation effect="fade" start="100" end="40" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
 						</control>
 					</focusedlayout>
+					<include condition="!Skin.HasSetting(disable.xbmb3c)">xbmb3c-actors</include>
 				</control>
 				<control type="image">
 					<left>822</left>
@@ -785,12 +786,12 @@
 						<height>58</height>
 						<texture border="1">separator3.png</texture>
 					</control>
-					<control type="button" id="10">
+					<!--<control type="button" id="10">
 						<description>Get Thumb</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>13511</label>
 						<enable>!Skin.HasSetting(KioskMode.Enabled)</enable>
-					</control>
+					</control>-->
 					<control type="image" id="202">
 						<width>2</width>
 						<height>58</height>

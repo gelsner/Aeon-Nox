@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<onload condition="System.HasAddon(plugin.video.xbmb3c)">RunScript(plugin.video.xbmb3c,skin)</onload>
 	<onload>RunScript(script.favourites)</onload>
 	<onload condition="!System.HasAddon(script.tv.show.next.aired)">Skin.SetBool(Disable.NextAired)</onload>
 	<onload condition="IsEmpty(Skin.String(Overlay.Toggle))">SetProperty(Overlay.Path,overlays/showcase/,home)</onload>
@@ -10,6 +11,12 @@
 	<onload condition="StringCompare(Skin.String(Overlay.Toggle),2)">SetProperty(Overlay.Path,overlays/showcase/2/,home)</onload>
 	<onload condition="StringCompare(Skin.String(Overlay.Toggle),3)">SetProperty(Overlay.Path,overlays/showcase/3/,home)</onload>
 	<onload condition="Skin.HasSetting(Disable.Resumable)">SetProperty(Overlay.Resumable,True,home)</onload>
+	<animation type="WindowClose" reversible="false">
+		<effect type="fade" start="100" end="0" time="640" />
+	</animation>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="fade" end="100" delay="800" time="640" />
+	</animation>
 	<controls>
 		<control type="button" id="10">
 			<description>trigger</description>
@@ -17,6 +24,7 @@
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>!Skin.HasSetting(Use_Startup_Playlist)</visible>
+			<animation effect="fade" start="100" end="0" time="3200">Focus</animation>
 		</control>
 		<control type="button" id="10">
 			<description>trigger with startup Playlist</description>
@@ -25,7 +33,31 @@
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
 			<visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
+			<animation effect="fade" start="100" end="0" time="3200">Focus</animation>
 		</control>
-		<include>CommonBackground</include>
+		<control type="image">
+			<texture>common/white.png</texture>
+			<width>1920</width>
+			<height>1080</height>
+			<colordiffuse>black</colordiffuse>
+		</control>
+		<control type="image">
+			<left>923</left>
+			<top>603</top>
+			<width>74</width>
+			<height>74</height>
+			<texture>loader.gif</texture>
+			<colordiffuse>selected</colordiffuse>
+			<animation effect="fade" start="70" time="1200" condition="true" pulse="true">Conditional</animation>
+		</control>
+		<control type="image">
+			<left>704</left>
+			<top>300</top>
+			<width>512</width>
+			<height>180</height>
+			<aspectratio>keep</aspectratio>
+			<texture>aeon-nox-logo.png</texture>
+			<colordiffuse>white</colordiffuse>
+		</control>
 	</controls>
 </window>

@@ -50,6 +50,19 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
+							<visible>IsEmpty(Window(home).Property(recentlyadded))</visible>
+						</control>
+						<control type="label">
+							<left>925</left>
+							<width>790</width>
+							<height>70</height>
+							<font>font30</font>
+							<textcolor>grey2</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Label]</label>
+							<visible>!IsEmpty(Window(home).Property(recentlyadded))</visible>
 						</control>
 						<control type="image">
 							<left>1750</left>
@@ -113,6 +126,20 @@
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(502)">Conditional</animation>
+							<visible>IsEmpty(Window(home).Property(recentlyadded))</visible>
+						</control>
+						<control type="label">
+							<top>-15</top>
+							<width>1220</width>
+							<height>70</height>
+							<font>font30</font>
+							<textcolor>white2</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Label]</label>
+							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(502)">Conditional</animation>
+							<visible>!IsEmpty(Window(home).Property(recentlyadded))</visible>
 						</control>
 						<control type="textbox">
 							<label>$VAR[VideoPlotVar]</label>

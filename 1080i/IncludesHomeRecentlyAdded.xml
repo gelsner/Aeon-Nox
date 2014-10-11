@@ -5,7 +5,7 @@
 			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0">WindowOpen</animation>
 			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
 			<animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
-			<visible>[StringCompare(Container(9000).ListItem.Property(WidgetType),1) | StringCompare(Container(9000).ListItem.Property(WidgetType),2) | StringCompare(Container(9000).ListItem.Property(WidgetType),4) | StringCompare(Container(9000).ListItem.Property(WidgetType),5)]</visible>
+			<visible>[[StringCompare(Container(9000).ListItem.Property(WidgetType),1) | StringCompare(Container(9000).ListItem.Property(WidgetType),2) | StringCompare(Container(9000).ListItem.Property(WidgetType),4) | StringCompare(Container(9000).ListItem.Property(WidgetType),5)]] | !Skin.HasSetting(disable.xbmb3c) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), musicvideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos)] + IsEmpty(Window(home).Property(Search.IsActive))</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="group">
 				<visible>ControlGroup(9003).HasFocus() + !Skin.HasSetting(lowermainmenu)</visible>
@@ -75,6 +75,17 @@
 						<shadowcolor>black</shadowcolor>
 						<label>$INFO[Container(8000).ListItem.Title]</label>
 						<wrapmultiline>true</wrapmultiline>
+						<visible>Skin.HasSetting(disable.xbmb3c)</visible>
+					</control>
+					<control type="label">
+						<width>900</width>
+						<height>40</height>
+						<font>font14_title</font>
+						<textcolor>labelheader</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<label>$INFO[Container(8000).ListItem.Label]</label>
+						<wrapmultiline>true</wrapmultiline>
+						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
 					</control>
 					<control type="label">
 						<width>900</width>
@@ -141,7 +152,7 @@
 						<textcolor>white2</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<label>$INFO[Container(8000).ListItem.Director,$LOCALIZE[31000] ]</label>
-						<visible>IsEmpty(Container(8000).ListItem.Artist) + IsEmpty(Container(8000).ListItem.TvShowTitle)</visible>
+						<visible>IsEmpty(Container(8000).ListItem.Artist) + IsEmpty(Container(8000).ListItem.TvShowTitle) + Skin.HasSetting(disable.xbmb3c)</visible>
 					</control>
 					<!--<control type="label">
 						<width>900</width>
@@ -272,6 +283,17 @@
 						<font>font15_title</font>
 						<align>center</align>
 						<textcolor>dialogheader</textcolor>
+						<label>$LOCALIZE[19605]</label>
+						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
+					</control>
+					<control type="label">
+						<left>32</left>
+						<top>32</top>
+						<width>362</width>
+						<height>40</height>
+						<font>font15_title</font>
+						<align>center</align>
+						<textcolor>dialogheader</textcolor>
 						<label>$INFO[Container(9000).ListItem.Property(WidgetLabel)]</label>
 					</control>
 					<control type="image">
@@ -333,7 +355,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!IsEmpty(Container(9000).ListItem.Property(Widget))</visible>
+						<visible>!IsEmpty(Container(9000).ListItem.Property(Widget)) + Skin.HasSetting(disable.xbmb3c)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -367,6 +389,545 @@
 							</control>
 						</focusedlayout>
 						<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), zero)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video">$INFO[Window.Property(xbmb3c_collection_menuitem_content_0)]&type=recent</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), one)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video">$INFO[Window.Property(xbmb3c_collection_menuitem_content_1)]&type=recent</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), two)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video">$INFO[Window.Property(xbmb3c_collection_menuitem_content_2)]&type=recent</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), three)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video">$INFO[Window.Property(xbmb3c_collection_menuitem_content_3)]&type=recent</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), four)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video">$INFO[Window.Property(xbmb3c_collection_menuitem_content_4)]&type=recent</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), five)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video">$INFO[Window.Property(xbmb3c_collection_menuitem_content_5)]&type=recent</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), six)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video">$INFO[Window.Property(xbmb3c_collection_menuitem_content_6)]&type=recent</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), seven)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video">$INFO[Window.Property(xbmb3c_collection_menuitem_content_7)]&type=recent</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), eight)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video">$INFO[Window.Property(xbmb3c_collection_menuitem_content_8)]&type=recent</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), nine)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video">$INFO[Window.Property(xbmb3c_collection_menuitem_content_9)]&type=recent</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), ten)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video">$INFO[Window.Property(xbmb3c_collection_menuitem_content_10)]&type=recent</content>
 					</control>
 				</control>
 			</control>

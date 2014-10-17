@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">8</defaultcontrol>
+	<defaultcontrol always="true">999</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<include condition="Skin.HasSetting(Enable.TvTunes)">LoadTvTunes</include>
 	<controls>
@@ -752,12 +752,19 @@
 					<ondown condition="!Control.IsVisible(50)">4003</ondown>
 					<ondown condition="Control.IsVisible(50)">50</ondown>
 					<orientation>horizontal</orientation>
-					<control type="togglebutton" id="8">
+					<!--<control type="togglebutton" id="8">
 						<description>Play/browse to Show</description>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>208</label>
 						<altlabel>1024</altlabel>
 						<usealttexture>Container.Content(TVShows)</usealttexture>
+					</control>-->
+					<control type="button" id="999">
+						<description>Play</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>208</label>
+						<onclick>$INFO[Window(Home).Property(MB3.Action)]</onclick>
+						<onclick>Dialog.Close(MovieInformation)</onclick>
 					</control>
 					<control type="image" id="200">
 						<width>2</width>

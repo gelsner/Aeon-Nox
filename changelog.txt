@@ -1,3 +1,7 @@
+[B]5.0.3[/B]
+- Slightly changed look of viewtype "BannerInfo"
+- Fixed Play-Button in DialogVideoInfo
+
 [B]5.0.2[/B]
 - Added viewtype "BannerInfo"
 

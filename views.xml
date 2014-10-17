@@ -10,5 +10,6 @@
     <view id="Logo" value="59" />
     <view id="Wall" value="500" />
     <view id="Low List" value="501" />
-    <view id="Episode" value="502" />    
+    <view id="Episode" value="502" />
+    <view id="BannerInfo" value="505" />
 </views>

@@ -1,3 +1,10 @@
+[B]5.0.3[/B]
+- Slightly changed look of viewtype "BannerInfo"
+- Fixed Play-Button in DialogVideoInfo
+
+[B]5.0.2[/B]
+- Added viewtype "BannerInfo"
+
 [B]5.0.1[/B]
 - In skin settings now every Mediabrowser section can be hidden separately from main menu
 

@@ -63,7 +63,7 @@
 		<focusposition>2</focusposition>
 		<viewtype label="Logo">list</viewtype>
 		<scrolltime tween="quadratic" easing="out">300</scrolltime>
-		<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
+		<visible>[Container.Content(tvshows) | Container.Content(movies)] + !Skin.HasSetting(enable.plexbmc)</visible>
 		<orientation>horizontal</orientation>
 		<itemlayout width="495" height="450">
 			<include>LandscapeLogoLayout</include>

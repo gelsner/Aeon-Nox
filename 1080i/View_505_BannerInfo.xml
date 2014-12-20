@@ -53,7 +53,7 @@
 							<bordersize>8</bordersize>
 						</control>
         	            <control type="group">
-							<visible>IsEmpty(ListItem.Art(banner))</visible>
+							<visible>IsEmpty(ListItem.Art(banner)) + !Skin.HasSetting(enable.plexbmc)</visible>
 							<control type="image">
 								<width>980</width>
                         	    <height>181</height>
@@ -69,6 +69,18 @@
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 								<fadetime>400</fadetime>
+								<bordersize>2</bordersize>
+							</control>
+						</control>
+        	            <control type="group">
+							<visible>Skin.HasSetting(enable.plexbmc)</visible>
+							<control type="image">
+								<width>980</width>
+                        	    <height>181</height>
+								<aspectratio>scale</aspectratio>
+								<texture background="true">$INFO[ListItem.Property(banner)]</texture>
+								<fadetime>400</fadetime>
+								<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 								<bordersize>2</bordersize>
 							</control>
 						</control>
@@ -107,7 +119,7 @@
 							<bordersize>8</bordersize>
 						</control>
                         <control type="group">
-							<visible>IsEmpty(ListItem.Art(banner))</visible>
+							<visible>IsEmpty(ListItem.Art(banner)) + !Skin.HasSetting(enable.plexbmc)</visible>
 							<control type="image">
 								<width>980</width>
                                 <height>181</height>
@@ -124,6 +136,18 @@
 								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 								<fadetime>400</fadetime>
 								<bordersize>2</bordersize>
+							</control>
+						</control>
+                        <control type="group">
+							<visible>Skin.HasSetting(enable.plexbmc)</visible>
+							<control type="image">
+								<width>980</width>
+                                <height>181</height>
+								<aspectratio>scale</aspectratio>
+								<texture background="true">$INFO[ListItem.Property(banner)]</texture>
+								<fadetime>400</fadetime>
+								<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+								<bordersize>8</bordersize>
 							</control>
 						</control>
                         <control type="image">
@@ -167,7 +191,7 @@
 				<fadetime>400</fadetime>
 				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 				<bordersize>2</bordersize>
-				<visible>Skin.HasSetting(disable.xbmb3c)</visible>
+				<visible>!Skin.HasSetting(enable.xbmb3c)</visible>
 			</control>
 			<control type="image">
 				<posx>1113</posx>
@@ -179,7 +203,7 @@
 				<fadetime>400</fadetime>
 				<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 				<bordersize>2</bordersize>
-				<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
+				<visible>Skin.HasSetting(enable.xbmb3c)</visible>
 			</control>
 			<control type="label">
 				<posx>1113</posx>

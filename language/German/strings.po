@@ -544,8 +544,8 @@ msgid "Boxsets"
 msgstr "Sammlungen"
 
 msgctxt "#32100"
-msgid "Disable Media Browser Mode"
-msgstr "Deaktiviere 'Media Browser'-Modus"
+msgid "Enable Media Browser Mode"
+msgstr "Aktiviere 'Media Browser'-Modus"
 
 msgctxt "#32101"
 msgid "Enable Media Browser Mode for music"
@@ -570,3 +570,14 @@ msgstr "Deaktiviere Gruppierung von Filmen in Sammlungen"
 msgctxt "#32106"
 msgid "Set Default Views"
 msgstr "Standardansichten setzen"
+
+
+#Plexbmc-strings
+
+msgctxt "#32500"
+msgid "Enable Plexbmc Mode"
+msgstr "Aktiviere 'Plexbmc'-Modus"
+
+msgctxt "#32530"
+msgid "Recently watched"
+msgstr "Zuletzt angesehen"

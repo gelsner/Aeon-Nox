@@ -9,8 +9,8 @@
 		<onleft>9000</onleft>
 		<onright>9000</onright>
 		<movement>1</movement>
-		<onup condition="Control.IsVisible(9003) + ![System.HasMediaDVD | System.HasAddon(script.globalsearch) | !Skin.HasSetting(disable.xbmb3c)]">9003</onup>
-		<onup condition="System.HasMediaDVD | System.HasAddon(script.globalsearch) | !Skin.HasSetting(disable.xbmb3c)">9020</onup>
+		<onup condition="Control.IsVisible(9003) + ![System.HasMediaDVD | System.HasAddon(script.globalsearch) | Skin.HasSetting(enable.xbmb3c)]">9003</onup>
+		<onup condition="System.HasMediaDVD | System.HasAddon(script.globalsearch) | Skin.HasSetting(enable.xbmb3c)">9020</onup>
 		<!--<onup condition="Control.IsVisible(9003) + !System.HasMediaDVD">9003</onup>
 		<onup condition="System.HasMediaDVD">9020</onup>-->
 		<ondown>9001</ondown>
@@ -177,7 +177,7 @@
 	<!--Main Menu-->
 	<include name="PicturesMainMenu">
 		<item id="4">
-			<visible>Skin.HasSetting(disable.xbmb3c) | [!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(enable.xbmb3c.pictures)]</visible>
+			<visible>[!Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)] | [Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.xbmb3c.pictures)]</visible>
 			<label fallback="31951">$INFO[Skin.String(PicturesHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultPicture.png">$INFO[Skin.String(PicturesHomeItem.Icon)]</icon>
@@ -195,7 +195,7 @@
 	</include>
 	<include name="MusicMainMenu">
 		<item id="3">
-			<visible>Skin.HasSetting(disable.xbmb3c) | [!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(enable.xbmb3c.music)]</visible>
+			<visible>[!Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)] | [Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.xbmb3c.music)]</visible>
 			<label fallback="31956">$INFO[Skin.String(MusicHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultAddonMusic.png">$INFO[Skin.String(MusicHomeItem.Icon)]</icon>
@@ -213,7 +213,7 @@
 	</include>
 	<include name="MoviesMainMenu">
 		<item id="10">
-			<visible>Skin.HasSetting(disable.xbmb3c)</visible>
+			<visible>!Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)</visible>
 			<label fallback="31954">$INFO[Skin.String(MovieHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultMovies.png">$INFO[Skin.String(MovieHomeItem.Icon)]</icon>
@@ -231,7 +231,7 @@
 	</include>
 	<include name="TVShowsMainMenu">
 		<item id="11">
-			<visible>Skin.HasSetting(disable.xbmb3c)</visible>
+			<visible>!Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)</visible>
 			<label fallback="31955">$INFO[Skin.String(TVShowHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultTVShows.png">$INFO[Skin.String(TVShowHomeItem.Icon)]</icon>
@@ -368,7 +368,7 @@
 	</include>
 	<include name="MusicVideosMainMenu">
 		<item id="13">
-			<visible>Skin.HasSetting(disable.xbmb3c)</visible>
+			<visible>!Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)</visible>
 			<label fallback="31960">$INFO[Skin.String(MusicVideoHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultMusicVideos.png">$INFO[Skin.String(MusicVideoHomeItem.Icon)]</icon>
@@ -651,6 +651,160 @@
 			<visible>!IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_10))</visible>
 		</item>
 	</include>
+	<include name="PlexbmcMenuItem0">
+		<item id="730">
+			<label>$INFO[Window(Home).Property(plexbmc.0.title)]</label>
+			<onclick>$VAR[plexitem0.action]</onclick>
+			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.0.title)].jpg</thumb>
+			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.0.type)]</property>
+			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.0.recent)]</property>
+			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.0.unwatched)]</property>
+			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.0.genre)]</property>
+			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.0.year)]</property>
+			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.0.recentlywatched)]</property>
+			<visible>!IsEmpty(Window(Home).Property(plexbmc.0.title))</visible>
+		</item>
+	</include>
+	<include name="PlexbmcMenuItem1">
+		<item id="731">
+			<label>$INFO[Window(Home).Property(plexbmc.1.title)]</label>
+			<onclick>$VAR[plexitem1.action]</onclick>
+			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.1.title)].jpg</thumb>
+			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.1.type)]</property>
+			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.1.recent)]</property>
+			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.1.unwatched)]</property>
+			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.1.genre)]</property>
+			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.1.year)]</property>
+			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.1.recentlywatched)]</property>
+			<visible>!IsEmpty(Window(Home).Property(plexbmc.1.title))</visible>
+		</item>
+	</include>
+	<include name="PlexbmcMenuItem2">
+		<item id="732">
+			<label>$INFO[Window(Home).Property(plexbmc.2.title)]</label>
+			<onclick>$VAR[plexitem2.action]</onclick>
+			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.2.title)].jpg</thumb>
+			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.2.type)]</property>
+			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.2.recent)]</property>
+			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.2.unwatched)]</property>
+			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.2.genre)]</property>
+			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.2.year)]</property>
+			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.2.recentlywatched)]</property>
+			<visible>!IsEmpty(Window(Home).Property(plexbmc.2.title))</visible>
+		</item>
+	</include>
+	<include name="PlexbmcMenuItem3">
+		<item id="733">
+			<label>$INFO[Window(Home).Property(plexbmc.3.title)]</label>
+			<onclick>$VAR[plexitem3.action]</onclick>
+			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.3.title)].jpg</thumb>
+			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.3.type)]</property>
+			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.3.recent)]</property>
+			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.3.unwatched)]</property>
+			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.3.genre)]</property>
+			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.3.year)]</property>
+			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.3.recentlywatched)]</property>
+			<visible>!IsEmpty(Window(Home).Property(plexbmc.3.title))</visible>
+		</item>
+	</include>
+	<include name="PlexbmcMenuItem4">
+		<item id="734">
+			<label>$INFO[Window(Home).Property(plexbmc.4.title)]</label>
+			<onclick>$VAR[plexitem4.action]</onclick>
+			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.4.title)].jpg</thumb>
+			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.4.type)]</property>
+			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.4.recent)]</property>
+			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.4.unwatched)]</property>
+			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.4.genre)]</property>
+			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.4.year)]</property>
+			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.4.recentlywatched)]</property>
+			<visible>!IsEmpty(Window(Home).Property(plexbmc.4.title))</visible>
+		</item>
+	</include>
+	<include name="PlexbmcMenuItem5">
+		<item id="735">
+			<label>$INFO[Window(Home).Property(plexbmc.5.title)]</label>
+			<onclick>$VAR[plexitem5.action]</onclick>
+			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.5.title)].jpg</thumb>
+			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.5.type)]</property>
+			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.5.recent)]</property>
+			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.5.unwatched)]</property>
+			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.5.genre)]</property>
+			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.5.year)]</property>
+			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.5.recentlywatched)]</property>
+			<visible>!IsEmpty(Window(Home).Property(plexbmc.5.title))</visible>
+		</item>
+	</include>
+	<include name="PlexbmcMenuItem6">
+		<item id="736">
+			<label>$INFO[Window(Home).Property(plexbmc.6.title)]</label>
+			<onclick>$VAR[plexitem6.action]</onclick>
+			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.6.title)].jpg</thumb>
+			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.6.type)]</property>
+			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.6.recent)]</property>
+			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.6.unwatched)]</property>
+			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.6.genre)]</property>
+			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.6.year)]</property>
+			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.6.recentlywatched)]</property>
+			<visible>!IsEmpty(Window(Home).Property(plexbmc.6.title))</visible>
+		</item>
+	</include>
+	<include name="PlexbmcMenuItem7">
+		<item id="737">
+			<label>$INFO[Window(Home).Property(plexbmc.7.title)]</label>
+			<onclick>$VAR[plexitem7.action]</onclick>
+			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.7.title)].jpg</thumb>
+			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.7.type)]</property>
+			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.7.recent)]</property>
+			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.7.unwatched)]</property>
+			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.7.genre)]</property>
+			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.7.year)]</property>
+			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.7.recentlywatched)]</property>
+			<visible>!IsEmpty(Window(Home).Property(plexbmc.7.title))</visible>
+		</item>
+	</include>
+	<include name="PlexbmcMenuItem8">
+		<item id="738">
+			<label>$INFO[Window(Home).Property(plexbmc.8.title)]</label>
+			<onclick>$VAR[plexitem8.action]</onclick>
+			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.8.title)].jpg</thumb>
+			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.8.type)]</property>
+			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.8.recent)]</property>
+			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.8.unwatched)]</property>
+			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.8.genre)]</property>
+			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.8.year)]</property>
+			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.8.recentlywatched)]</property>
+			<visible>!IsEmpty(Window(Home).Property(plexbmc.8.title))</visible>
+		</item>
+	</include>
+	<include name="PlexbmcMenuItem9">
+		<item id="739">
+			<label>$INFO[Window(Home).Property(plexbmc.9.title)]</label>
+			<onclick>$VAR[plexitem9.action]</onclick>
+			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.9.title)].jpg</thumb>
+			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.9.type)]</property>
+			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.9.recent)]</property>
+			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.9.unwatched)]</property>
+			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.9.genre)]</property>
+			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.9.year)]</property>
+			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.9.recentlywatched)]</property>
+			<visible>!IsEmpty(Window(Home).Property(plexbmc.9.title))</visible>
+		</item>
+	</include>
+	<include name="PlexbmcMenuItem10">
+		<item id="740">
+			<label>$INFO[Window(Home).Property(plexbmc.10.title)]</label>
+			<onclick>$VAR[plexitem10.action]</onclick>
+			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.10.title)].jpg</thumb>
+			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.10.type)]</property>
+			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.10.recent)]</property>
+			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.10.unwatched)]</property>
+			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.10.genre)]</property>
+			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.10.year)]</property>
+			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.10.recentlywatched)]</property>
+			<visible>!IsEmpty(Window(Home).Property(plexbmc.10.title))</visible>
+		</item>
+	</include>
 
 	<include name="FallbackMenu">
 		<content>
@@ -658,18 +812,29 @@
 			<include condition="IsEmpty(Skin.String(MusicHomeItem.Disable))">MusicMainMenu</include>
 			<include condition="IsEmpty(Skin.String(MovieHomeItem.Disable))">MoviesMainMenu</include>
 			<include condition="IsEmpty(Skin.String(TVShowHomeItem.Disable))">TVShowsMainMenu</include>
-			<include condition="[IsEmpty(Skin.String(SettingsHomeItem.Disable)) + Skin.HasSetting(disable.xbmb3c)] | !Skin.HasSetting(disable.xbmb3c)">SettingsMainMenu</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(hide.section0) + [[[StringCompare(Window(Home).Property(xbmb3c.0.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.0.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.0.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)]]">XBMB3CMenuItem0</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(hide.section1) + [[[StringCompare(Window(Home).Property(xbmb3c.1.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.1.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.1.type), music) + !StringCompare(Window(Home).Property(xbmb3c.1.type), photos)]]">XBMB3CMenuItem1</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(hide.section2) + [[[StringCompare(Window(Home).Property(xbmb3c.2.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.2.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.2.type), music) + !StringCompare(Window(Home).Property(xbmb3c.2.type), photos)]]">XBMB3CMenuItem2</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(hide.section3) + [[[StringCompare(Window(Home).Property(xbmb3c.3.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.3.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.3.type), music) + !StringCompare(Window(Home).Property(xbmb3c.3.type), photos)]]">XBMB3CMenuItem3</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(hide.section4) + [[[StringCompare(Window(Home).Property(xbmb3c.4.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.4.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.4.type), music) + !StringCompare(Window(Home).Property(xbmb3c.4.type), photos)]]">XBMB3CMenuItem4</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(hide.section5) + [[[StringCompare(Window(Home).Property(xbmb3c.5.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.5.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.5.type), music) + !StringCompare(Window(Home).Property(xbmb3c.5.type), photos)]]">XBMB3CMenuItem5</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(hide.section6) + [[[StringCompare(Window(Home).Property(xbmb3c.6.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.6.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.6.type), music) + !StringCompare(Window(Home).Property(xbmb3c.6.type), photos)]]">XBMB3CMenuItem6</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(hide.section7) + [[[StringCompare(Window(Home).Property(xbmb3c.7.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.7.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.7.type), music) + !StringCompare(Window(Home).Property(xbmb3c.7.type), photos)]]">XBMB3CMenuItem7</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(hide.section8) + [[[StringCompare(Window(Home).Property(xbmb3c.8.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.8.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.8.type), music) + !StringCompare(Window(Home).Property(xbmb3c.8.type), photos)]]">XBMB3CMenuItem8</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(hide.section9) + [[[StringCompare(Window(Home).Property(xbmb3c.9.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.9.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.9.type), music) + !StringCompare(Window(Home).Property(xbmb3c.9.type), photos)]]">XBMB3CMenuItem9</include>
-			<include condition="!Skin.HasSetting(disable.xbmb3c) + !Skin.HasSetting(hide.section10) + [[[StringCompare(Window(Home).Property(xbmb3c.10.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.10.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.10.type), music) + !StringCompare(Window(Home).Property(xbmb3c.10.type), photos)]]">XBMB3CMenuItem10</include>
+			<include condition="[IsEmpty(Skin.String(SettingsHomeItem.Disable)) + !Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)] | Skin.HasSetting(enable.xbmb3c) | Skin.HasSetting(enable.plexbmc)">SettingsMainMenu</include>
+			<include condition="Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(hide.section0) + [[[StringCompare(Window(Home).Property(xbmb3c.0.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.0.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.0.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)]]">XBMB3CMenuItem0</include>
+			<include condition="Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(hide.section1) + [[[StringCompare(Window(Home).Property(xbmb3c.1.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.1.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.1.type), music) + !StringCompare(Window(Home).Property(xbmb3c.1.type), photos)]]">XBMB3CMenuItem1</include>
+			<include condition="Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(hide.section2) + [[[StringCompare(Window(Home).Property(xbmb3c.2.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.2.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.2.type), music) + !StringCompare(Window(Home).Property(xbmb3c.2.type), photos)]]">XBMB3CMenuItem2</include>
+			<include condition="Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(hide.section3) + [[[StringCompare(Window(Home).Property(xbmb3c.3.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.3.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.3.type), music) + !StringCompare(Window(Home).Property(xbmb3c.3.type), photos)]]">XBMB3CMenuItem3</include>
+			<include condition="Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(hide.section4) + [[[StringCompare(Window(Home).Property(xbmb3c.4.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.4.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.4.type), music) + !StringCompare(Window(Home).Property(xbmb3c.4.type), photos)]]">XBMB3CMenuItem4</include>
+			<include condition="Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(hide.section5) + [[[StringCompare(Window(Home).Property(xbmb3c.5.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.5.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.5.type), music) + !StringCompare(Window(Home).Property(xbmb3c.5.type), photos)]]">XBMB3CMenuItem5</include>
+			<include condition="Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(hide.section6) + [[[StringCompare(Window(Home).Property(xbmb3c.6.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.6.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.6.type), music) + !StringCompare(Window(Home).Property(xbmb3c.6.type), photos)]]">XBMB3CMenuItem6</include>
+			<include condition="Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(hide.section7) + [[[StringCompare(Window(Home).Property(xbmb3c.7.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.7.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.7.type), music) + !StringCompare(Window(Home).Property(xbmb3c.7.type), photos)]]">XBMB3CMenuItem7</include>
+			<include condition="Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(hide.section8) + [[[StringCompare(Window(Home).Property(xbmb3c.8.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.8.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.8.type), music) + !StringCompare(Window(Home).Property(xbmb3c.8.type), photos)]]">XBMB3CMenuItem8</include>
+			<include condition="Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(hide.section9) + [[[StringCompare(Window(Home).Property(xbmb3c.9.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.9.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.9.type), music) + !StringCompare(Window(Home).Property(xbmb3c.9.type), photos)]]">XBMB3CMenuItem9</include>
+			<include condition="Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(hide.section10) + [[[StringCompare(Window(Home).Property(xbmb3c.10.type), music) + Skin.HasSetting(enable.xbmb3c.music)] | [StringCompare(Window(Home).Property(xbmb3c.10.type), photos) + Skin.HasSetting(enable.xbmb3c.pictures)]] | [!StringCompare(Window(Home).Property(xbmb3c.10.type), music) + !StringCompare(Window(Home).Property(xbmb3c.10.type), photos)]]">XBMB3CMenuItem10</include>
+			<include condition="Skin.HasSetting(enable.plexbmc)">PlexbmcMenuItem0</include>
+			<include condition="Skin.HasSetting(enable.plexbmc)">PlexbmcMenuItem1</include>
+			<include condition="Skin.HasSetting(enable.plexbmc)">PlexbmcMenuItem2</include>
+			<include condition="Skin.HasSetting(enable.plexbmc)">PlexbmcMenuItem3</include>
+			<include condition="Skin.HasSetting(enable.plexbmc)">PlexbmcMenuItem4</include>
+			<include condition="Skin.HasSetting(enable.plexbmc)">PlexbmcMenuItem5</include>
+			<include condition="Skin.HasSetting(enable.plexbmc)">PlexbmcMenuItem6</include>
+			<include condition="Skin.HasSetting(enable.plexbmc)">PlexbmcMenuItem7</include>
+			<include condition="Skin.HasSetting(enable.plexbmc)">PlexbmcMenuItem8</include>
+			<include condition="Skin.HasSetting(enable.plexbmc)">PlexbmcMenuItem9</include>
+			<include condition="Skin.HasSetting(enable.plexbmc)">PlexbmcMenuItem10</include>
 			<include condition="IsEmpty(Skin.String(Custom1HomeItem.Disable)) + !IsEmpty(Skin.String(Custom1HomeItem.Path))">CustomMainMenuItem1</include>
 			<include condition="IsEmpty(Skin.String(Custom2HomeItem.Disable)) + !IsEmpty(Skin.String(Custom2HomeItem.Path))">CustomMainMenuItem2</include>
 			<include condition="IsEmpty(Skin.String(Custom3HomeItem.Disable)) + !IsEmpty(Skin.String(Custom3HomeItem.Path))">CustomMainMenuItem3</include>
@@ -692,14 +857,14 @@
 			<onclick>ActivateWindow(Videos,Movies,root)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>Library.HasContent(Movies) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2) + Skin.HasSetting(disable.xbmb3c)</visible>
+			<visible>Library.HasContent(Movies) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2) + !Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)</visible>
 		</item>
 		<item>
 			<label>20343</label>
 			<onclick>ActivateWindow(Videos,TvShows,root)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>Library.HasContent(TVShows) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2) + Skin.HasSetting(disable.xbmb3c)</visible>
+			<visible>Library.HasContent(TVShows) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2) + !Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)</visible>
 		</item>
 		<item>
 			<label>24001</label>
@@ -727,7 +892,7 @@
 			<onclick>ActivateWindow(Videos,Root)</onclick>
 			<icon>-</icon>
 			<thumb>-</thumb>
-			<visible>Library.HasContent(Video) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2) + Skin.HasSetting(disable.xbmb3c)</visible>
+			<visible>Library.HasContent(Video) + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x2) + !Skin.HasSetting(enable.xbmb3c)+ !Skin.HasSetting(enable.plexbmc)</visible>
 		</item>
 	</include>
 	<include name="HomeSubMenuMovies">
@@ -1090,6 +1255,7 @@
 	<include name="FallbackSubMenu">
 		<content>
 			<include>xbmb3c-submenu-items</include>
+			<include>plexbmc-submenu-items</include>
 			<include>HomeSubMenuVideos</include>
 			<include>HomeSubMenuMovies</include>
 			<include>HomeSubMenuTVShows</include>
@@ -1105,6 +1271,7 @@
 	<include name="CustomSubMenu">
 		<content>
 			<include>xbmb3c-submenu-items</include>
+			<include>plexbmc-submenu-items</include>
 			<include>skinshortcuts-submenu</include>
 		</content>
 	</include>
@@ -1151,6 +1318,44 @@
 			<label>$LOCALIZE[515]</label>
 			<visible>!IsEmpty(Container(9000).ListItem.Property(MB.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), music)]</visible>
 			<onclick>$INFO[Container(9000).ListItem.Property(MB.genre.action)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+
+	<include name="plexbmc-submenu-items">
+		<!-- year -->
+		<item>
+			<label>$LOCALIZE[652]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(PLEX.currentmediatype)) + StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), movie)</visible>
+			<onclick>$INFO[Container(9000).ListItem.Property(PLEX.year.action)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>
+		<!-- genre -->
+		<item>
+			<label>$LOCALIZE[515]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(PLEX.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), movie) | StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), show)]</visible>
+			<onclick>$INFO[Container(9000).ListItem.Property(PLEX.genre.action)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>
+		<!-- recently added -->
+		<item>
+			<label>$LOCALIZE[31328]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(PLEX.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), movie) | StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), show)]</visible>
+			<onclick>$INFO[Container(9000).ListItem.Property(PLEX.recent.action)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>
+		<!-- recently watched -->
+		<item>
+			<label>$LOCALIZE[32530]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(PLEX.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), movie) | StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), show)]</visible>
+			<onclick>$INFO[Container(9000).ListItem.Property(PLEX.recentlywatched.action)]</onclick>
+			<property name="isSubmenu">True</property>
+		</item>
+		<!-- unwatched -->
+		<item>
+			<label>$LOCALIZE[16101]</label>
+			<visible>!IsEmpty(Container(9000).ListItem.Property(PLEX.currentmediatype)) + [StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), movie)]</visible>
+			<onclick>$INFO[Container(9000).ListItem.Property(PLEX.unwatched.action)]</onclick>
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>

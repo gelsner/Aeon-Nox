@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="GlobalBackgroundVar">
-		<value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart) + Skin.HasSetting(disable.xbmb3c)">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart) + !Skin.HasSetting(disable.xbmb3c)">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
+		<value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart) + !Skin.HasSetting(enable.xbmb3c)">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Disable.Fanart) + Skin.HasSetting(enable.xbmb3c)">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
 		<value condition="StringCompare(Container(9033).ListItem.Thumb,1)">$INFO[Window(Home).Property(script.grab.fanart.Movie.FanArt)]</value>
 		<value condition="StringCompare(Container(9033).ListItem.Thumb,2)">$INFO[Window(Home).Property(script.grab.fanart.TV.FanArt)]</value>
 		<value condition="StringCompare(Container(9033).ListItem.Thumb,3)">$INFO[Window(Home).Property(script.grab.fanart.Video.FanArt)]</value>
@@ -142,12 +142,12 @@
 		<value>$LOCALIZE[20360]</value>
 	</variable>
 	<variable name="VideoInfoPlotVar">
-		<value condition="Skin.HasSetting(disable.xbmb3c)">$INFO[ListItem.Plot]</value>
-		<value condition="!Skin.HasSetting(disable.xbmb3c)">$INFO[Window(Home).Property(MB3.Plot)]</value>
+		<value condition="!Skin.HasSetting(enable.xbmb3c)">$INFO[ListItem.Plot]</value>
+		<value condition="Skin.HasSetting(enable.xbmb3c)">$INFO[Window(Home).Property(MB3.Plot)]</value>
 	</variable>
 	<variable name="VideoPlotVar">
-		<value condition="Skin.HasSetting(disable.xbmb3c)">$INFO[ListItem.Plot]</value>
-		<value condition="!Skin.HasSetting(disable.xbmb3c)">$INFO[Window(Home).Property(MB3.Plot)]</value>
+		<value condition="!Skin.HasSetting(enable.xbmb3c)">$INFO[ListItem.Plot]</value>
+		<value condition="Skin.HasSetting(enable.xbmb3c)">$INFO[Window(Home).Property(MB3.Plot)]</value>
 	</variable>
 	<variable name="OtherPlotVar">
 		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
@@ -557,8 +557,8 @@
 	</variable>
 
 	<variable name="searchmethod">
-		<value condition="!Skin.HasSetting(disable.xbmb3c)">RunPlugin(plugin://plugin.video.xbmb3c?mode=18)</value>
-		<value condition="Skin.HasSetting(disable.xbmb3c)">RunAddon(script.globalsearch)</value>
+		<value condition="Skin.HasSetting(enable.xbmb3c)">RunPlugin(plugin://plugin.video.xbmb3c?mode=18)</value>
+		<value condition="!Skin.HasSetting(enable.xbmb3c)">RunAddon(script.globalsearch)</value>
 	</variable>
 
 	<variable name="item0.action">
@@ -604,5 +604,39 @@
 	<variable name="item10.action">
 		<value condition="!Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.10.collapsed.path)]</value>
 		<value condition="Skin.HasSetting(disable.groups)">$INFO[Window(Home).Property(xbmb3c.10.path)]</value>
+	</variable>
+
+	<variable name="plexitem0.action">
+		<value>$INFO[Window(Home).Property(plexbmc.0.all)]</value>
+	</variable>
+	<variable name="plexitem1.action">
+		<value>$INFO[Window(Home).Property(plexbmc.1.all)]</value>
+	</variable>
+	<variable name="plexitem2.action">
+		<value>$INFO[Window(Home).Property(plexbmc.2.all)]</value>
+	</variable>
+	<variable name="plexitem3.action">
+		<value>$INFO[Window(Home).Property(plexbmc.3.all)]</value>
+	</variable>
+	<variable name="plexitem4.action">
+		<value>$INFO[Window(Home).Property(plexbmc.4.all)]</value>
+	</variable>
+	<variable name="plexitem5.action">
+		<value>$INFO[Window(Home).Property(plexbmc.5.all)]</value>
+	</variable>
+	<variable name="plexitem6.action">
+		<value>$INFO[Window(Home).Property(plexbmc.6.all)]</value>
+	</variable>
+	<variable name="plexitem7.action">
+		<value>$INFO[Window(Home).Property(plexbmc.7.all)]</value>
+	</variable>
+	<variable name="plexitem8.action">
+		<value>$INFO[Window(Home).Property(plexbmc.8.all)]</value>
+	</variable>
+	<variable name="plexitem9.action">
+		<value>$INFO[Window(Home).Property(plexbmc.9.all)]</value>
+	</variable>
+	<variable name="plexitem10.action">
+		<value>$INFO[Window(Home).Property(plexbmc.10.all)]</value>
 	</variable>
 </includes>

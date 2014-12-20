@@ -91,7 +91,7 @@
 						<icon>-</icon>
 					</item>
 					<item id="5">
-						<label>Mediabrowser</label>
+						<label>Mediabrowser/PleXBMC</label>
 						<onclick>noop</onclick>
 						<icon>-</icon>
 					</item>
@@ -448,7 +448,7 @@
 						<font>font15</font>
 						<label>31943</label>
 						<onclick>ActivateWindow(1127)</onclick>
-						<visible>Skin.HasSetting(disable.xbmb3c)</visible>
+						<visible>!Skin.HasSetting(enable.xbmb3c)</visible>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
 					<control type="button" id="405">
@@ -476,15 +476,28 @@
 					<onup>9005</onup>
 					<ondown>9005</ondown>
 					<visible>Container(9000).HasFocus(5)</visible>
+					<control type="radiobutton" id="550">
+						<width>1316</width>
+						<height>90</height>
+						<textoffsetx>30</textoffsetx>
+						<font>font15</font>
+						<label>32500</label>
+						<onclick>Skin.ToggleSetting(enable.plexbmc)</onclick>
+						<onclick>Skin.Reset(defaultsettings)</onclick>
+						<onclick>Skin.Reset(enable.xbmb3c)</onclick>
+						<selected>Skin.HasSetting(enable.plexbmc)</selected>
+						<texturenofocus border="1">separator5.png</texturenofocus>
+					</control>
 					<control type="radiobutton" id="501">
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
 						<font>font15</font>
 						<label>32100</label>
-						<onclick>Skin.ToggleSetting(disable.xbmb3c)</onclick>
+						<onclick>Skin.ToggleSetting(enable.xbmb3c)</onclick>
 						<onclick>Skin.Reset(defaultsettings)</onclick>
-						<selected>Skin.HasSetting(disable.xbmb3c)</selected>
+						<onclick>Skin.Reset(enable.plexbmc)</onclick>
+						<selected>Skin.HasSetting(enable.xbmb3c)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
 					</control>
 					<control type="radiobutton" id="502">
@@ -497,7 +510,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(enable.xbmb3c.music)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c)</visible>
 					</control>
 					<control type="radiobutton" id="503">
 						<width>1316</width>
@@ -509,7 +522,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(enable.xbmb3c.pictures)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c)</visible>
 					</control>
 					<control type="radiobutton" id="504">
 						<width>1316</width>
@@ -521,7 +534,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(disable.groups)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c)</visible>
 					</control>
 					<control type="button" id="505">
 						<label>32106</label>
@@ -532,7 +545,7 @@
 						<onclick>RunAddon(plugin.video.xbmb3c,"?mode=3&url=http%3a%2f%2fSETVIEWSSETVIEWS")</onclick>
 						<selected>Skin.HasSetting(disable.groups)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c)</visible>
 					</control>
 					<control type="radiobutton" id="510">
 						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.0.title)]' $LOCALIZE[32104]</label>
@@ -544,7 +557,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(hide.section0)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_0)) + !StringCompare(Window(Home).Property(xbmb3c.0.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_0)) + !StringCompare(Window(Home).Property(xbmb3c.0.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="511">
 						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.1.title)]' $LOCALIZE[32104]</label>
@@ -556,7 +569,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(hide.section1)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_1)) + !StringCompare(Window(Home).Property(xbmb3c.1.type), music) + !StringCompare(Window(Home).Property(xbmb3c.1.type), photos)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_1)) + !StringCompare(Window(Home).Property(xbmb3c.1.type), music) + !StringCompare(Window(Home).Property(xbmb3c.1.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="512">
 						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.2.title)]' $LOCALIZE[32104]</label>
@@ -568,7 +581,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(hide.section2)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_2)) + !StringCompare(Window(Home).Property(xbmb3c.2.type), music) + !StringCompare(Window(Home).Property(xbmb3c.2.type), photos)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_2)) + !StringCompare(Window(Home).Property(xbmb3c.2.type), music) + !StringCompare(Window(Home).Property(xbmb3c.2.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="513">
 						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.3.title)]' $LOCALIZE[32104]</label>
@@ -580,7 +593,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(hide.section3)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_3)) + !StringCompare(Window(Home).Property(xbmb3c.3.type), music) + !StringCompare(Window(Home).Property(xbmb3c.3.type), photos)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_3)) + !StringCompare(Window(Home).Property(xbmb3c.3.type), music) + !StringCompare(Window(Home).Property(xbmb3c.3.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="514">
 						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.4.title)]' $LOCALIZE[32104]</label>
@@ -592,7 +605,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(hide.section4)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_4)) + !StringCompare(Window(Home).Property(xbmb3c.4.type), music) + !StringCompare(Window(Home).Property(xbmb3c.4.type), photos)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_4)) + !StringCompare(Window(Home).Property(xbmb3c.4.type), music) + !StringCompare(Window(Home).Property(xbmb3c.4.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="515">
 						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.5.title)]' $LOCALIZE[32104]</label>
@@ -604,7 +617,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(hide.section5)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_5)) + !StringCompare(Window(Home).Property(xbmb3c.5.type), music) + !StringCompare(Window(Home).Property(xbmb3c.5.type), photos)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_5)) + !StringCompare(Window(Home).Property(xbmb3c.5.type), music) + !StringCompare(Window(Home).Property(xbmb3c.5.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="516">
 						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.6.title)]' $LOCALIZE[32104]</label>
@@ -616,7 +629,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(hide.section6)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_6)) + !StringCompare(Window(Home).Property(xbmb3c.6.type), music) + !StringCompare(Window(Home).Property(xbmb3c.6.type), photos)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_6)) + !StringCompare(Window(Home).Property(xbmb3c.6.type), music) + !StringCompare(Window(Home).Property(xbmb3c.6.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="517">
 						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.7.title)]' $LOCALIZE[32104]</label>
@@ -628,7 +641,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(hide.section7)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_7)) + !StringCompare(Window(Home).Property(xbmb3c.7.type), music) + !StringCompare(Window(Home).Property(xbmb3c.7.type), photos)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_7)) + !StringCompare(Window(Home).Property(xbmb3c.7.type), music) + !StringCompare(Window(Home).Property(xbmb3c.7.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="518">
 						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.8.title)]' $LOCALIZE[32104]</label>
@@ -640,7 +653,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(hide.section8)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_8)) + !StringCompare(Window(Home).Property(xbmb3c.8.type), music) + !StringCompare(Window(Home).Property(xbmb3c.8.type), photos)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_8)) + !StringCompare(Window(Home).Property(xbmb3c.8.type), music) + !StringCompare(Window(Home).Property(xbmb3c.8.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="519">
 						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.9.title)]' $LOCALIZE[32104]</label>
@@ -652,7 +665,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(hide.section9)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_9)) + !StringCompare(Window(Home).Property(xbmb3c.9.type), music) + !StringCompare(Window(Home).Property(xbmb3c.9.type), photos)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_9)) + !StringCompare(Window(Home).Property(xbmb3c.9.type), music) + !StringCompare(Window(Home).Property(xbmb3c.9.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="520">
 						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.10.title)]' $LOCALIZE[32104]</label>
@@ -664,7 +677,7 @@
 						<onclick>Skin.Reset(defaultsettings)</onclick>
 						<selected>Skin.HasSetting(hide.section10)</selected>
 						<texturenofocus border="1">separator5.png</texturenofocus>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_10)) + !StringCompare(Window(Home).Property(xbmb3c.10.type), music) + !StringCompare(Window(Home).Property(xbmb3c.10.type), photos)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_10)) + !StringCompare(Window(Home).Property(xbmb3c.10.type), music) + !StringCompare(Window(Home).Property(xbmb3c.10.type), photos)</visible>
 					</control>
 				</control>				
 			</control>

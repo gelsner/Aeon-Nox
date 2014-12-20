@@ -36,7 +36,7 @@
 				<preloaditems>2</preloaditems>
 				<viewtype label="31088">icons</viewtype>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
-				<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
+				<visible>[[Container.Content(tvshows) | Container.Content(movies)] + !Skin.HasSetting(enable.plexbmc)] | [Container.Content(tvshows) + Skin.HasSetting(enable.plexbmc)]</visible>
 				<itemlayout height="110" width="560">
 					<control type="image">
 						<width>560</width>
@@ -50,7 +50,7 @@
 						<visible>!IsEmpty(ListItem.Art(banner)) | IsEmpty(ListItem.Art(fanart))</visible>
 					</control>
 					<control type="group">
-						<visible>IsEmpty(ListItem.Art(banner))</visible>
+						<visible>IsEmpty(ListItem.Art(banner)) + !Skin.HasSetting(enable.plexbmc)</visible>
 						<control type="image">
 							<width>560</width>
 							<height>110</height>
@@ -68,6 +68,19 @@
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 							<fadetime>400</fadetime>
+							<bordersize>4</bordersize>
+							<colordiffuse>BAffffff</colordiffuse>
+						</control>
+					</control>
+					<control type="group">
+						<visible>Skin.HasSetting(enable.plexbmc)</visible>
+						<control type="image">
+							<width>560</width>
+							<height>110</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Property(banner)]</texture>
+							<fadetime>400</fadetime>
+							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 							<bordersize>4</bordersize>
 							<colordiffuse>BAffffff</colordiffuse>
 						</control>
@@ -104,7 +117,7 @@
 							<visible>!IsEmpty(ListItem.Art(banner)) | IsEmpty(ListItem.Art(fanart))</visible>
 						</control>
 						<control type="group">
-							<visible>IsEmpty(ListItem.Art(banner))</visible>
+							<visible>IsEmpty(ListItem.Art(banner)) + !Skin.HasSetting(enable.plexbmc)</visible>
 							<control type="image">
 								<width>560</width>
 								<height>110</height>
@@ -122,6 +135,18 @@
 								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 								<fadetime>400</fadetime>
 								<bordersize>4</bordersize>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Skin.HasSetting(enable.plexbmc)</visible>
+							<control type="image">
+								<width>560</width>
+								<height>110</height>
+								<aspectratio>scale</aspectratio>
+								<texture background="true">$INFO[ListItem.Property(banner)]</texture>
+								<fadetime>400</fadetime>
+								<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
+								<bordersize>8</bordersize>
 							</control>
 						</control>
 						<control type="image">

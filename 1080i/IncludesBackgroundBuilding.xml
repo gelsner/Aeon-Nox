@@ -119,6 +119,14 @@
 			<description>Normal Default Background Image</description>
 			<include>FullscreenDimensions</include>
 			<imagepath fallback="special://skin/backgrounds/default_bg.jpg" background="true">$VAR[HomeBackgroundVar]</imagepath>
+			<visible>!Skin.HasSetting(enable.plexbmc)</visible>
+		</control>
+		<control type="image">
+			<description>Normal Default Background Image</description>
+			<include>FullscreenDimensions</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<texture fallback="special://skin/backgrounds/default_bg.jpg" background="true">$VAR[HomeBackgroundVar]</texture>
+			<visible>Skin.HasSetting(enable.plexbmc)</visible>
 		</control>
 	</include>
 	<include name="TVShowNextAiredBackground">

@@ -5,7 +5,7 @@
 			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0">WindowOpen</animation>
 			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
 			<animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
-			<visible>[[StringCompare(Container(9000).ListItem.Property(WidgetType),1) | StringCompare(Container(9000).ListItem.Property(WidgetType),2) | StringCompare(Container(9000).ListItem.Property(WidgetType),4) | StringCompare(Container(9000).ListItem.Property(WidgetType),5)]] | !Skin.HasSetting(disable.xbmb3c) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), musicvideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos)] + IsEmpty(Window(home).Property(Search.IsActive))</visible>
+			<visible>[[StringCompare(Container(9000).ListItem.Property(WidgetType),1) | StringCompare(Container(9000).ListItem.Property(WidgetType),2) | StringCompare(Container(9000).ListItem.Property(WidgetType),4) | StringCompare(Container(9000).ListItem.Property(WidgetType),5)]] | Skin.HasSetting(enable.xbmb3c) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), musicvideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos)] + IsEmpty(Window(home).Property(Search.IsActive))</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="group">
 				<visible>ControlGroup(9003).HasFocus() + !Skin.HasSetting(lowermainmenu)</visible>
@@ -75,7 +75,7 @@
 						<shadowcolor>black</shadowcolor>
 						<label>$INFO[Container(8000).ListItem.Title]</label>
 						<wrapmultiline>true</wrapmultiline>
-						<visible>Skin.HasSetting(disable.xbmb3c)</visible>
+						<visible>!Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)</visible>
 					</control>
 					<control type="label">
 						<width>900</width>
@@ -85,7 +85,7 @@
 						<shadowcolor>black</shadowcolor>
 						<label>$INFO[Container(8000).ListItem.Label]</label>
 						<wrapmultiline>true</wrapmultiline>
-						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) | Skin.HasSetting(enable.plexbmc)</visible>
 					</control>
 					<control type="label">
 						<width>900</width>
@@ -152,7 +152,7 @@
 						<textcolor>white2</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<label>$INFO[Container(8000).ListItem.Director,$LOCALIZE[31000] ]</label>
-						<visible>IsEmpty(Container(8000).ListItem.Artist) + IsEmpty(Container(8000).ListItem.TvShowTitle) + Skin.HasSetting(disable.xbmb3c)</visible>
+						<visible>IsEmpty(Container(8000).ListItem.Artist) + IsEmpty(Container(8000).ListItem.TvShowTitle) + !Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)</visible>
 					</control>
 					<!--<control type="label">
 						<width>900</width>
@@ -284,7 +284,7 @@
 						<align>center</align>
 						<textcolor>dialogheader</textcolor>
 						<label>$LOCALIZE[19605]</label>
-						<visible>!Skin.HasSetting(disable.xbmb3c)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c)</visible>
 					</control>
 					<control type="label">
 						<left>32</left>
@@ -355,7 +355,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!IsEmpty(Container(9000).ListItem.Property(Widget)) + Skin.HasSetting(disable.xbmb3c)</visible>
+						<visible>!IsEmpty(Container(9000).ListItem.Property(Widget)) + !Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -404,7 +404,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), zero)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), zero)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -453,7 +453,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), one)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), one)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -502,7 +502,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), two)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), two)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -551,7 +551,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), three)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), three)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -600,7 +600,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), four)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), four)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -649,7 +649,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), five)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), five)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -698,7 +698,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), six)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), six)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -747,7 +747,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), seven)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), seven)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -796,7 +796,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), eight)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), eight)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -845,7 +845,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), nine)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), nine)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">
@@ -894,7 +894,7 @@
 						<pagecontrol>-</pagecontrol>
 						<orientation>vertical</orientation>
 						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<visible>!Skin.HasSetting(disable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), ten)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) + StringCompare(Container(9000).ListItem.Property(MB.currentcollection), ten)</visible>
 						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
 						<itemlayout height="60" width="360">
 							<control type="image">

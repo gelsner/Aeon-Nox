@@ -139,7 +139,7 @@
 					<onclick condition="!IsEmpty(Container(90000).ListItem.Property(Disable))">Skin.Reset($INFO[Container(90000).ListItem.Property(Item),,HomeItem.Disable])</onclick>
 					<selected>[Control.HasFocus(90010) + IsEmpty(Window(home).Property(Nox.Disable))] | [!Control.HasFocus(90010) + IsEmpty(Container(90000).ListItem.Property(Disable))]</selected>
 					<enable>!IsEmpty(Container(90000).ListItem.Property(Path))</enable>
-					<visible>Skin.HasSetting(disable.xbmb3c) | [!Skin.HasSetting(disable.xbmb3c) + !StringCompare(Container(90000).Position, 0)]</visible>
+					<visible>!Skin.HasSetting(enable.xbmb3c) | [Skin.HasSetting(enable.xbmb3c) + !StringCompare(Container(90000).Position, 0)]</visible>
 				</control>
 				<control type="button" id="90011">
 					<description>Edit Label Button</description>

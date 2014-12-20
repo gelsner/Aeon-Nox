@@ -662,6 +662,7 @@
 			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.0.genre)]</property>
 			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.0.year)]</property>
 			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.0.recentlywatched)]</property>
+			<property name="PLEX.search.action">$INFO[Window.Property(plexbmc.0.search)]</property>
 			<visible>!IsEmpty(Window(Home).Property(plexbmc.0.title))</visible>
 		</item>
 	</include>
@@ -676,6 +677,7 @@
 			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.1.genre)]</property>
 			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.1.year)]</property>
 			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.1.recentlywatched)]</property>
+			<property name="PLEX.search.action">$INFO[Window.Property(plexbmc.1.search)]</property>
 			<visible>!IsEmpty(Window(Home).Property(plexbmc.1.title))</visible>
 		</item>
 	</include>
@@ -690,6 +692,7 @@
 			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.2.genre)]</property>
 			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.2.year)]</property>
 			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.2.recentlywatched)]</property>
+			<property name="PLEX.search.action">$INFO[Window.Property(plexbmc.2.search)]</property>
 			<visible>!IsEmpty(Window(Home).Property(plexbmc.2.title))</visible>
 		</item>
 	</include>
@@ -704,6 +707,7 @@
 			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.3.genre)]</property>
 			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.3.year)]</property>
 			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.3.recentlywatched)]</property>
+			<property name="PLEX.search.action">$INFO[Window.Property(plexbmc.3.search)]</property>
 			<visible>!IsEmpty(Window(Home).Property(plexbmc.3.title))</visible>
 		</item>
 	</include>
@@ -718,6 +722,7 @@
 			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.4.genre)]</property>
 			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.4.year)]</property>
 			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.4.recentlywatched)]</property>
+			<property name="PLEX.search.action">$INFO[Window.Property(plexbmc.4.search)]</property>
 			<visible>!IsEmpty(Window(Home).Property(plexbmc.4.title))</visible>
 		</item>
 	</include>
@@ -732,6 +737,7 @@
 			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.5.genre)]</property>
 			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.5.year)]</property>
 			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.5.recentlywatched)]</property>
+			<property name="PLEX.search.action">$INFO[Window.Property(plexbmc.5.search)]</property>
 			<visible>!IsEmpty(Window(Home).Property(plexbmc.5.title))</visible>
 		</item>
 	</include>
@@ -746,6 +752,7 @@
 			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.6.genre)]</property>
 			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.6.year)]</property>
 			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.6.recentlywatched)]</property>
+			<property name="PLEX.search.action">$INFO[Window.Property(plexbmc.6.search)]</property>
 			<visible>!IsEmpty(Window(Home).Property(plexbmc.6.title))</visible>
 		</item>
 	</include>
@@ -760,6 +767,7 @@
 			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.7.genre)]</property>
 			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.7.year)]</property>
 			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.7.recentlywatched)]</property>
+			<property name="PLEX.search.action">$INFO[Window.Property(plexbmc.7.search)]</property>
 			<visible>!IsEmpty(Window(Home).Property(plexbmc.7.title))</visible>
 		</item>
 	</include>
@@ -774,6 +782,7 @@
 			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.8.genre)]</property>
 			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.8.year)]</property>
 			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.8.recentlywatched)]</property>
+			<property name="PLEX.search.action">$INFO[Window.Property(plexbmc.8.search)]</property>
 			<visible>!IsEmpty(Window(Home).Property(plexbmc.8.title))</visible>
 		</item>
 	</include>
@@ -788,6 +797,7 @@
 			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.9.genre)]</property>
 			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.9.year)]</property>
 			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.9.recentlywatched)]</property>
+			<property name="PLEX.search.action">$INFO[Window.Property(plexbmc.9.search)]</property>
 			<visible>!IsEmpty(Window(Home).Property(plexbmc.9.title))</visible>
 		</item>
 	</include>
@@ -802,6 +812,7 @@
 			<property name="PLEX.genre.action">$INFO[Window.Property(plexbmc.10.genre)]</property>
 			<property name="PLEX.year.action">$INFO[Window.Property(plexbmc.10.year)]</property>
 			<property name="PLEX.recentlywatched.action">$INFO[Window.Property(plexbmc.10.recentlywatched)]</property>
+			<property name="PLEX.search.action">$INFO[Window.Property(plexbmc.10.search)]</property>
 			<visible>!IsEmpty(Window(Home).Property(plexbmc.10.title))</visible>
 		</item>
 	</include>

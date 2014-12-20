@@ -558,7 +558,8 @@
 
 	<variable name="searchmethod">
 		<value condition="Skin.HasSetting(enable.xbmb3c)">RunPlugin(plugin://plugin.video.xbmb3c?mode=18)</value>
-		<value condition="!Skin.HasSetting(enable.xbmb3c)">RunAddon(script.globalsearch)</value>
+		<value condition="!Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)">RunAddon(script.globalsearch)</value>
+		<value condition="Skin.HasSetting(enable.plexbmc)">$INFO[Container(9000).ListItem.Property(PLEX.search.action)]</value>
 	</variable>
 
 	<variable name="item0.action">

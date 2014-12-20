@@ -424,7 +424,9 @@
 	<variable name="WidgetListIconVar">
 		<value condition="!IsEmpty(Container(8000).ListItem.Art(tvshow.landscape))">$INFO[Container(8000).ListItem.Art(tvshow.landscape)]</value>
 		<value condition="!IsEmpty(Container(8000).ListItem.Art(fanart)) + StringCompare(Container(9000).ListItem.Property(WidgetType),1)">$INFO[Container(8000).ListItem.Art(fanart)]</value>
-		<value>$INFO[Container(8000).ListItem.Icon]</value>
+		<value condition="Skin.HasSetting(enable.plexbmc)">$INFO[Container(8000).ListItem.Art(fanart)]</value>
+		<value condition="Skin.HasSetting(enable.plexbmc) + IsEmpty(Container(8000).ListItem.Art(fanart))">$INFO[Container(8000).ListItem.Icon]</value>
+		<value condition="!Skin.HasSetting(enable.plexbmc)">$INFO[Container(8000).ListItem.Icon]</value>
 	</variable>
 	<variable name="WidgetPosterVar">
 		<value condition="!IsEmpty(Container(8000).ListItem.Art(poster))">$INFO[Container(8000).ListItem.Art(poster)]</value>

@@ -5,7 +5,7 @@
 			<animation effect="slide" tween="cubic" time="720" start="0,-1080" end="0,0">WindowOpen</animation>
 			<animation effect="slide" tween="cubic" time="720" end="0,-1080" start="0,0">WindowClose</animation>
 			<animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
-			<visible>[[StringCompare(Container(9000).ListItem.Property(WidgetType),1) | StringCompare(Container(9000).ListItem.Property(WidgetType),2) | StringCompare(Container(9000).ListItem.Property(WidgetType),4) | StringCompare(Container(9000).ListItem.Property(WidgetType),5)]] | Skin.HasSetting(enable.xbmb3c) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), musicvideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos)] + IsEmpty(Window(home).Property(Search.IsActive))</visible>
+			<visible>[[StringCompare(Container(9000).ListItem.Property(WidgetType),1) | StringCompare(Container(9000).ListItem.Property(WidgetType),2) | StringCompare(Container(9000).ListItem.Property(WidgetType),4) | StringCompare(Container(9000).ListItem.Property(WidgetType),5)]] | Skin.HasSetting(enable.xbmb3c) + [StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), movies) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), tvshows) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), musicvideos) | StringCompare(Container(9000).ListItem.Property(MB.currentmediatype), homevideos)] | [Skin.HasSetting(enable.plexbmc) + [StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), movie) | StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), show)]] + IsEmpty(Window(home).Property(Search.IsActive))</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="group">
 				<visible>ControlGroup(9003).HasFocus() + !Skin.HasSetting(lowermainmenu)</visible>
@@ -389,6 +389,55 @@
 							</control>
 						</focusedlayout>
 						<content target="$VAR[WidgetListTargetVar]">$VAR[WidgetListContent]</content>
+					</control>
+					<control type="list" id="8000">
+						<left>31</left>
+						<top>31</top>
+						<width>360</width>
+						<height>360</height>
+						<onup>8000</onup>
+						<ondown>8000</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<onback>9000</onback>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<orientation>vertical</orientation>
+						<scrolltime tween="quadratic" easing="out">200</scrolltime>
+						<visible>Skin.HasSetting(enable.plexbmc)</visible>
+						<autoscroll time="10000" delay="10000" repeat="10000">Control.IsVisible(9003) + !Control.HasFocus(8000)</autoscroll>
+						<itemlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="1">separator2.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="60" width="360">
+							<control type="image">
+								<width>360</width>
+								<height>60</height>
+								<texture border="5">listselect_fo.png</texture>
+							</control>
+							<control type="label">
+								<width>360</width>
+								<height>60</height>
+								<font>font14</font>
+								<selectedcolor>selected</selectedcolor>
+								<textoffsetx>15</textoffsetx>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content target="video" limit="10">$INFO[Container(9000).ListItem.Property(PLEX.widget.content)]</content>
 					</control>
 					<control type="list" id="8000">
 						<left>31</left>

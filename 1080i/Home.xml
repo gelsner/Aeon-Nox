@@ -68,7 +68,7 @@
 						<font>IconTiny</font>
 						<textcolor>grey</textcolor>
 						<shadowcolor>shadow</shadowcolor>
-						<visible>System.HasAddon(script.globalsearch) | Skin.HasSetting(enable.xbmb3c) | Skin.HasSetting(enable.plexbmc)</visible>
+						<visible>[System.HasAddon(script.globalsearch) + !Skin.HasSetting(enable.plexbmc)] | Skin.HasSetting(enable.xbmb3c) | [Skin.HasSetting(enable.plexbmc) + [StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), movie) | StringCompare(Container(9000).ListItem.Property(PLEX.currentmediatype), show)]]</visible>
 						<onclick>$VAR[searchmethod]</onclick>
 						<animation type="Visible">
 							<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />

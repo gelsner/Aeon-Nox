@@ -284,7 +284,7 @@
 						<align>center</align>
 						<textcolor>dialogheader</textcolor>
 						<label>$LOCALIZE[19605]</label>
-						<visible>Skin.HasSetting(enable.xbmb3c)</visible>
+						<visible>Skin.HasSetting(enable.xbmb3c) | Skin.HasSetting(enable.plexbmc)</visible>
 					</control>
 					<control type="label">
 						<left>32</left>

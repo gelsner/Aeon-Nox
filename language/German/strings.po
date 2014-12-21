@@ -575,8 +575,8 @@ msgstr "Standardansichten setzen"
 #Plexbmc-strings
 
 msgctxt "#32500"
-msgid "Enable Plexbmc Mode"
-msgstr "Aktiviere 'Plexbmc'-Modus"
+msgid "Enable PleXBMC Mode"
+msgstr "Aktiviere 'PleXBMC'-Modus"
 
 msgctxt "#32530"
 msgid "Recently watched"

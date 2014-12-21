@@ -827,8 +827,8 @@ msgstr "Set Default Views"
 #Plexbmc-strings
 
 msgctxt "#32500"
-msgid "Enable Plexbmc Mode"
-msgstr "Enable Plexbmc Mode"
+msgid "Enable PleXBMC Mode"
+msgstr "Enable PleXBMC Mode"
 
 msgctxt "#32530"
 msgid "Recently watched"

@@ -372,6 +372,7 @@
 		<value condition="Control.HasFocus(90016)">$LOCALIZE[31933]</value>
 		<value condition="Control.HasFocus(90017)">$LOCALIZE[31935]</value>
 		<value condition="Control.HasFocus(90020)">$LOCALIZE[31927]</value>
+		<value condition="Control.HasFocus(551)">$LOCALIZE[32502]</value>
 	</variable>
 	<variable name="lowermainmenuVar">
 		<value condition="Skin.HasSetting(lowermainmenu)">$LOCALIZE[418]</value>

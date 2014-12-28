@@ -655,7 +655,7 @@
 		<item id="730">
 			<label>$INFO[Window(Home).Property(plexbmc.0.title)]</label>
 			<onclick>$VAR[plexitem0.action]</onclick>
-			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.0.title)].jpg</thumb>
+			<thumb>$INFO[Skin.String(PleXBMCImagePath)]/$INFO[Window(Home).Property(plexbmc.0.title)].jpg</thumb>
 			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.0.type)]</property>
 			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.0.recent)]</property>
 			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.0.unwatched)]</property>
@@ -671,7 +671,7 @@
 		<item id="731">
 			<label>$INFO[Window(Home).Property(plexbmc.1.title)]</label>
 			<onclick>$VAR[plexitem1.action]</onclick>
-			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.1.title)].jpg</thumb>
+			<thumb>$INFO[Skin.String(PleXBMCImagePath)]/$INFO[Window(Home).Property(plexbmc.1.title)].jpg</thumb>
 			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.1.type)]</property>
 			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.1.recent)]</property>
 			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.1.unwatched)]</property>
@@ -687,7 +687,7 @@
 		<item id="732">
 			<label>$INFO[Window(Home).Property(plexbmc.2.title)]</label>
 			<onclick>$VAR[plexitem2.action]</onclick>
-			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.2.title)].jpg</thumb>
+			<thumb>$INFO[Skin.String(PleXBMCImagePath)]/$INFO[Window(Home).Property(plexbmc.2.title)].jpg</thumb>
 			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.2.type)]</property>
 			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.2.recent)]</property>
 			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.2.unwatched)]</property>
@@ -703,7 +703,7 @@
 		<item id="733">
 			<label>$INFO[Window(Home).Property(plexbmc.3.title)]</label>
 			<onclick>$VAR[plexitem3.action]</onclick>
-			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.3.title)].jpg</thumb>
+			<thumb>$INFO[Skin.String(PleXBMCImagePath)]/$INFO[Window(Home).Property(plexbmc.3.title)].jpg</thumb>
 			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.3.type)]</property>
 			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.3.recent)]</property>
 			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.3.unwatched)]</property>
@@ -719,7 +719,7 @@
 		<item id="734">
 			<label>$INFO[Window(Home).Property(plexbmc.4.title)]</label>
 			<onclick>$VAR[plexitem4.action]</onclick>
-			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.4.title)].jpg</thumb>
+			<thumb>$INFO[Skin.String(PleXBMCImagePath)]/$INFO[Window(Home).Property(plexbmc.4.title)].jpg</thumb>
 			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.4.type)]</property>
 			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.4.recent)]</property>
 			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.4.unwatched)]</property>
@@ -735,7 +735,7 @@
 		<item id="735">
 			<label>$INFO[Window(Home).Property(plexbmc.5.title)]</label>
 			<onclick>$VAR[plexitem5.action]</onclick>
-			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.5.title)].jpg</thumb>
+			<thumb>$INFO[Skin.String(PleXBMCImagePath)]/$INFO[Window(Home).Property(plexbmc.5.title)].jpg</thumb>
 			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.5.type)]</property>
 			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.5.recent)]</property>
 			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.5.unwatched)]</property>
@@ -751,7 +751,7 @@
 		<item id="736">
 			<label>$INFO[Window(Home).Property(plexbmc.6.title)]</label>
 			<onclick>$VAR[plexitem6.action]</onclick>
-			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.6.title)].jpg</thumb>
+			<thumb>$INFO[Skin.String(PleXBMCImagePath)]/$INFO[Window(Home).Property(plexbmc.6.title)].jpg</thumb>
 			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.6.type)]</property>
 			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.6.recent)]</property>
 			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.6.unwatched)]</property>
@@ -767,7 +767,7 @@
 		<item id="737">
 			<label>$INFO[Window(Home).Property(plexbmc.7.title)]</label>
 			<onclick>$VAR[plexitem7.action]</onclick>
-			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.7.title)].jpg</thumb>
+			<thumb>$INFO[Skin.String(PleXBMCImagePath)]/$INFO[Window(Home).Property(plexbmc.7.title)].jpg</thumb>
 			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.7.type)]</property>
 			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.7.recent)]</property>
 			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.7.unwatched)]</property>
@@ -783,7 +783,7 @@
 		<item id="738">
 			<label>$INFO[Window(Home).Property(plexbmc.8.title)]</label>
 			<onclick>$VAR[plexitem8.action]</onclick>
-			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.8.title)].jpg</thumb>
+			<thumb>$INFO[Skin.String(PleXBMCImagePath)]/$INFO[Window(Home).Property(plexbmc.8.title)].jpg</thumb>
 			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.8.type)]</property>
 			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.8.recent)]</property>
 			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.8.unwatched)]</property>
@@ -799,7 +799,7 @@
 		<item id="739">
 			<label>$INFO[Window(Home).Property(plexbmc.9.title)]</label>
 			<onclick>$VAR[plexitem9.action]</onclick>
-			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.9.title)].jpg</thumb>
+			<thumb>$INFO[Skin.String(PleXBMCImagePath)]/$INFO[Window(Home).Property(plexbmc.9.title)].jpg</thumb>
 			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.9.type)]</property>
 			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.9.recent)]</property>
 			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.9.unwatched)]</property>
@@ -815,7 +815,7 @@
 		<item id="740">
 			<label>$INFO[Window(Home).Property(plexbmc.10.title)]</label>
 			<onclick>$VAR[plexitem10.action]</onclick>
-			<thumb>special://skin/backgrounds/$INFO[Window(Home).Property(plexbmc.10.title)].jpg</thumb>
+			<thumb>$INFO[Skin.String(PleXBMCImagePath)]/$INFO[Window(Home).Property(plexbmc.10.title)].jpg</thumb>
 			<property name="PLEX.currentmediatype">$INFO[Window(Home).Property(plexbmc.10.type)]</property>
 			<property name="PLEX.recent.action">$INFO[Window.Property(plexbmc.10.recent)]</property>
 			<property name="PLEX.unwatched.action">$INFO[Window.Property(plexbmc.10.unwatched)]</property>

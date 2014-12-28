@@ -177,7 +177,7 @@
 	<!--Main Menu-->
 	<include name="PicturesMainMenu">
 		<item id="4">
-			<visible>[!Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)] | [Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.xbmb3c.pictures)]</visible>
+			<visible>!Skin.HasSetting(enable.xbmb3c) | [Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.xbmb3c.pictures)]</visible>
 			<label fallback="31951">$INFO[Skin.String(PicturesHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultPicture.png">$INFO[Skin.String(PicturesHomeItem.Icon)]</icon>
@@ -195,7 +195,7 @@
 	</include>
 	<include name="MusicMainMenu">
 		<item id="3">
-			<visible>[!Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.plexbmc)] | [Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.xbmb3c.music)]</visible>
+			<visible>!Skin.HasSetting(enable.xbmb3c) | [Skin.HasSetting(enable.xbmb3c) + !Skin.HasSetting(enable.xbmb3c.music)]</visible>
 			<label fallback="31956">$INFO[Skin.String(MusicHomeItem.Label)]</label>
 			<onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
 			<icon fallback="views/list/DefaultAddonMusic.png">$INFO[Skin.String(MusicHomeItem.Icon)]</icon>

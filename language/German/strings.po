@@ -583,8 +583,8 @@ msgid "Set path to background and collection images"
 msgstr "Pfad zu Hintergrund- und Sammlungen-Bilder setzen"
 
 msgctxt "#32502"
-msgid "Path to images which filenames will be used for background images of the Plex sections in main menu and for images of vide collections."
-msgstr "Pfad zu Bildern, deren Dateinamen für Hintergrundbilder der Plex-Sektionen im Hauptmenü und für Video-Sammlungen verwendet werden."
+msgid "Path to images which filenames will be used for background images of the Plex sections in main menu."
+msgstr "Pfad zu Bildern, deren Dateinamen für Hintergrundbilder der Plex-Sektionen im Hauptmenü verwendet werden."
 
 msgctxt "#32530"
 msgid "Recently watched"

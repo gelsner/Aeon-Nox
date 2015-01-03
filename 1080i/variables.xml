@@ -52,6 +52,8 @@
 	</variable>
 	<variable name="ListItem.Overlay">
 		<value condition="ListItem.IsResumable">overlays/list/resumable.png</value>
+		<value condition="StringCompare(ListItem.Property(boxset_info),set)">common/set2.png</value>
+		<value condition="StringCompare(ListItem.Property(boxset_info),set_watched)">common/setwatched2.png</value>
 		<value>$INFO[ListItem.Overlay,overlays/list/]</value>
 	</variable>
 	<variable name="ListOverlayEpisodesVar">

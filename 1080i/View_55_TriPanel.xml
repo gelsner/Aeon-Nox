@@ -206,7 +206,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label fallback="• • • •">$INFO[ListItem.Year]</label>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!IsEmpty(ListItem.Title) + IsEmpty(ListItem.Property(boxset_info))</visible>
 						</control>
 						<control type="label">
 							<left>110</left>
@@ -261,7 +261,7 @@
 							<aligny>center</aligny>
 							<label fallback="• • • •">$INFO[ListItem.Year]</label>
 							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(55)">Conditional</animation>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!IsEmpty(ListItem.Title) + IsEmpty(ListItem.Property(boxset_info))</visible>
 						</control>
 						<control type="label">
 							<left>110</left>

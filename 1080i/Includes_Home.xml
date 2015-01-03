@@ -9,8 +9,8 @@
 		<onleft>9000</onleft>
 		<onright>9000</onright>
 		<movement>1</movement>
-		<onup condition="Control.IsVisible(9003) + ![System.HasMediaDVD | System.HasAddon(script.globalsearch) | Skin.HasSetting(enable.xbmb3c)]">9003</onup>
-		<onup condition="System.HasMediaDVD | System.HasAddon(script.globalsearch) | Skin.HasSetting(enable.xbmb3c)">9020</onup>
+		<onup condition="Control.IsVisible(9003) + ![System.HasMediaDVD | System.HasAddon(script.globalsearch) | Skin.HasSetting(enable.xbmb3c) | Skin.HasSetting(enable.plexbmc)]">9003</onup>
+		<onup condition="System.HasMediaDVD | System.HasAddon(script.globalsearch) | Skin.HasSetting(enable.xbmb3c) | Skin.HasSetting(enable.plexbmc)">9020</onup>
 		<!--<onup condition="Control.IsVisible(9003) + !System.HasMediaDVD">9003</onup>
 		<onup condition="System.HasMediaDVD">9020</onup>-->
 		<ondown>9001</ondown>

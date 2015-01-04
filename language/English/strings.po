@@ -893,6 +893,10 @@ msgctxt "#32502"
 msgid "Path to images which filenames will be used for background images of the Plex sections in main menu."
 msgstr "Path to images which filenames will be used for background images of the Plex sections in main menu."
 
+msgctxt "#32503"
+msgid "Requires modified version of the PleXBMC-addon which can be found at: https://github.com/gelsner/plugin.video.plexbmc"
+msgstr "Requires modified version of the PleXBMC-addon which can be found at: https://github.com/gelsner/plugin.video.plexbmc"
+
 msgctxt "#32530"
 msgid "Recently watched"
 msgstr "Recently watched"

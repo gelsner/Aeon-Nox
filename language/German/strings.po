@@ -572,7 +572,7 @@ msgid "Set Default Views"
 msgstr "Standardansichten setzen"
 
 
-#Plexbmc-strings
+#PleXBMC-strings
 
 msgctxt "#32500"
 msgid "Enable PleXBMC Mode"
@@ -585,6 +585,11 @@ msgstr "Pfad zu Hintergrund- und Sammlungen-Bilder setzen"
 msgctxt "#32502"
 msgid "Path to images which filenames will be used for background images of the Plex sections in main menu."
 msgstr "Pfad zu Bildern, deren Dateinamen für Hintergrundbilder der Plex-Sektionen im Hauptmenü verwendet werden."
+
+msgctxt "#32503"
+msgid "Requires modified version of the PleXBMC-addon which can be found at: https://github.com/gelsner/plugin.video.plexbmc"
+msgstr "Benötigt angepasste Version des PleXBMC-Addons, zu finden unter: https://github.com/gelsner/plugin.video.plexbmc"
+
 
 msgctxt "#32530"
 msgid "Recently watched"

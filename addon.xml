@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.aeon.nox5.mediabrowser"
-  version="5.0.4"
+  version="5.0.5"
   name="Aeon Nox 5 Mediabrowser"
   provider-name="BigNoid (modified by boywhosetsfire)">
 	<requires>

@@ -569,7 +569,7 @@
 						<visible>Skin.HasSetting(enable.xbmb3c)</visible>
 					</control>
 					<control type="radiobutton" id="510">
-						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.0.title)]' $LOCALIZE[32104]</label>
+						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_0)]' $LOCALIZE[32104]</label>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -581,7 +581,7 @@
 						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_0)) + !StringCompare(Window(Home).Property(xbmb3c.0.type), music) + !StringCompare(Window(Home).Property(xbmb3c.0.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="511">
-						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.1.title)]' $LOCALIZE[32104]</label>
+						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_1)]' $LOCALIZE[32104]</label>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -593,7 +593,7 @@
 						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_1)) + !StringCompare(Window(Home).Property(xbmb3c.1.type), music) + !StringCompare(Window(Home).Property(xbmb3c.1.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="512">
-						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.2.title)]' $LOCALIZE[32104]</label>
+						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_2)]' $LOCALIZE[32104]</label>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -605,7 +605,7 @@
 						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_2)) + !StringCompare(Window(Home).Property(xbmb3c.2.type), music) + !StringCompare(Window(Home).Property(xbmb3c.2.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="513">
-						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.3.title)]' $LOCALIZE[32104]</label>
+						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_3)]' $LOCALIZE[32104]</label>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -617,7 +617,7 @@
 						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_3)) + !StringCompare(Window(Home).Property(xbmb3c.3.type), music) + !StringCompare(Window(Home).Property(xbmb3c.3.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="514">
-						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.4.title)]' $LOCALIZE[32104]</label>
+						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_4)]' $LOCALIZE[32104]</label>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -629,7 +629,7 @@
 						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_4)) + !StringCompare(Window(Home).Property(xbmb3c.4.type), music) + !StringCompare(Window(Home).Property(xbmb3c.4.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="515">
-						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.5.title)]' $LOCALIZE[32104]</label>
+						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_5)]' $LOCALIZE[32104]</label>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -641,7 +641,7 @@
 						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_5)) + !StringCompare(Window(Home).Property(xbmb3c.5.type), music) + !StringCompare(Window(Home).Property(xbmb3c.5.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="516">
-						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.6.title)]' $LOCALIZE[32104]</label>
+						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_6)]' $LOCALIZE[32104]</label>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -653,7 +653,7 @@
 						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_6)) + !StringCompare(Window(Home).Property(xbmb3c.6.type), music) + !StringCompare(Window(Home).Property(xbmb3c.6.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="517">
-						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.7.title)]' $LOCALIZE[32104]</label>
+						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_7)]' $LOCALIZE[32104]</label>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -665,7 +665,7 @@
 						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_7)) + !StringCompare(Window(Home).Property(xbmb3c.7.type), music) + !StringCompare(Window(Home).Property(xbmb3c.7.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="518">
-						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.8.title)]' $LOCALIZE[32104]</label>
+						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_8)]' $LOCALIZE[32104]</label>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -677,7 +677,7 @@
 						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_8)) + !StringCompare(Window(Home).Property(xbmb3c.8.type), music) + !StringCompare(Window(Home).Property(xbmb3c.8.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="519">
-						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.9.title)]' $LOCALIZE[32104]</label>
+						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_9)]' $LOCALIZE[32104]</label>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
@@ -689,7 +689,7 @@
 						<visible>Skin.HasSetting(enable.xbmb3c) + !IsEmpty(Window(Home).Property(xbmb3c_collection_menuitem_name_9)) + !StringCompare(Window(Home).Property(xbmb3c.9.type), music) + !StringCompare(Window(Home).Property(xbmb3c.9.type), photos)</visible>
 					</control>
 					<control type="radiobutton" id="520">
-						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c.10.title)]' $LOCALIZE[32104]</label>
+						<label>$LOCALIZE[32103] '$INFO[Window(Home).Property(xbmb3c_collection_menuitem_name_10)]' $LOCALIZE[32104]</label>
 						<width>1316</width>
 						<height>90</height>
 						<textoffsetx>30</textoffsetx>
